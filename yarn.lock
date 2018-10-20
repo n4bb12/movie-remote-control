@@ -7446,6 +7446,11 @@ trim-right@^1.0.1:
   dependencies:
     glob "^7.1.2"
 
+ts-keycode-enum@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/ts-keycode-enum/-/ts-keycode-enum-1.0.6.tgz#aeefd1c2fc7b0557f86a0e696e300905bbb4c1c1"
+  integrity sha512-DF8+Cf/FJJnPRxwz8agCoDelQXKZWQOS/gnnwx01nZ106tPJdB3BgJ9QTtLwXgR82D8O+nTjuZzWgf0Rg4vuRA==
+
 ts-node@~7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-7.0.1.tgz#9562dc2d1e6d248d24bc55f773e3f614337d9baf"

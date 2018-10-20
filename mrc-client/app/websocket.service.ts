@@ -1,14 +1,22 @@
 import { Injectable } from "@angular/core"
 
+import { ReplaySubject } from "rxjs"
+
+import { environment } from "../environments/environment"
+
 @Injectable({
   providedIn: "root",
 })
 export class WebsocketService {
 
   private ws: WebSocket
+  private historyStr = ""
+
+  readonly history = new ReplaySubject<string>(1)
 
   constructor() {
-    const ws = this.ws = new WebSocket("ws://localhost:3000")
+    const url = `ws://${environment.ws.host}:${environment.ws.port}`
+    const ws = this.ws = new WebSocket(url)
 
     ws.onopen = () => {
       console.log("connection opened")
@@ -16,7 +24,10 @@ export class WebsocketService {
     }
 
     ws.onmessage = evt => {
-      console.log("client received:", evt.data)
+      const message = evt.data
+      console.log("client received:", message)
+      this.historyStr += "\n" + message
+      this.history.next(this.historyStr.trim())
     }
 
     ws.onclose = () => {

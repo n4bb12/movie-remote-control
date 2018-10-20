@@ -1,7 +1,12 @@
 :host {
   display: block;
-  width: 50vw;
+  max-width: 25rem;
+  padding: 1rem;
   margin: 0 auto;
+}
+
+h1 {
+  margin: .5em;
 }
 
 div {
@@ -9,12 +14,17 @@ div {
 }
 
 button,
-input {
+input,
+textarea {
   flex: 1;
   padding: .5rem;
 }
 
 .point {
-  height: 50vh;
+  height: 30vh;
   border: 1px solid hsl(0, 0%, 87%);
+}
+
+textarea {
+  height: 30vh;
 }

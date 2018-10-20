@@ -4,6 +4,10 @@
 
 export const environment = {
   production: false,
+  ws: {
+    host: "localhost",
+    port: 3200,
+  },
 }
 
 /*

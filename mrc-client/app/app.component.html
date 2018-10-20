@@ -2,23 +2,23 @@
 
 <div
   class="point"
-  (pointerdown)="sendPointerdown($event)"
-  (pointermove)="sendPointermove($event)"
-  (pointerup)="sendPointerup($event)"
+  (pointerdown)="handlePointerdown($event)"
+  (pointermove)="handlePointermove($event)"
+  (pointerup)="handlePointerup($event)"
 ></div>
 
 <div>
   <button
     type="button"
-    (click)="sendCommand('REWIND')"
+    (click)="sendKey(37)"
   >Rewind</button>
   <button
     type="button"
-    (click)="sendCommand('PAUSE')"
+    (click)="sendKey(32)"
   >Pause</button>
   <button
     type="button"
-    (click)="sendCommand('FORWARD')"
+    (click)="sendKey(39)"
   >Forward</button>
 </div>
 
@@ -30,6 +30,11 @@
     [value]="recentKeydown"
     (keydown)="sendKey($event)"
   />
+</div>
+
+<h1>server-response</h1>
+<div>
+  <textarea [value]="history"></textarea>
 </div>
 
 <router-outlet></router-outlet>
