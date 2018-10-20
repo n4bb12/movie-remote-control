@@ -14,13 +14,18 @@
   "repository": "github:n4bb12/movie-remote-control",
   "license": "ISC",
   "author": "Abraham Schilling",
+  "bin": {
+    "mrc-server": "dist/mrc-server"
+  },
   "scripts": {
-    "build": "ng build",
-    "dev": "ng serve",
+    "build": "run-p build:*",
+    "build:client": "ng build",
+    "build:server": "tsc --project mrc-server/tsconfig.json",
+    "dev": "run-p dev:*",
+    "dev:client": "ng serve",
+    "dev:server": "ts-node --project mrc-server/tsconfig.json mrc-server",
     "e2e": "ng e2e",
     "lint": "ng lint",
-    "serve": "ng serve",
-    "start": "ng serve",
     "test": "ng test"
   },
   "dependencies": {
@@ -34,6 +39,9 @@
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
     "core-js": "^2.5.4",
+    "koa": "^2.5.3",
+    "lodash": "^4.17.11",
+    "robotjs": "^0.5.1",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
   },
@@ -45,6 +53,8 @@
     "@n4bb12/config-tslint": "^1.3.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/koa": "^2.0.46",
+    "@types/lodash": "^4.14.117",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
@@ -54,6 +64,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "npm-run-all": "^4.1.3",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",

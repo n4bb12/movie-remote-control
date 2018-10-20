@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "lib": ["es2018"],
+    "module": "commonjs",
+    "outDir": "../dist/mrc-server",
+    "target": "es2015"
+  },
+  "extends": "../tsconfig.json"
+}
