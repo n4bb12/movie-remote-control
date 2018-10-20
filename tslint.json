@@ -3,7 +3,8 @@
   "extends": ["tslint-angular", "@n4bb12/config-tslint"],
   "rules": {
     "jsdoc-format": false,
-    "member-ordering": false
+    "member-ordering": false,
+    "max-line-length": { "severity": "warning", "options": 120 }
   },
   "rulesDirectory": ["node_modules/codelyzer"]
 }

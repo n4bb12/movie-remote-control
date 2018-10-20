@@ -26,7 +26,9 @@
     "dev:server": "nodemon --watch mrc-server --ext ts --exec yarn ts-node --project mrc-server/tsconfig.json mrc-server",
     "prod": "yarn build && node dist/mrc-server",
     "e2e": "ng e2e",
-    "lint": "ng lint",
+    "lint": "run-p lint:*",
+    "lint:client": "ng lint",
+    "lint:server": "tslint --project mrc-server",
     "test": "ng test"
   },
   "dependencies": {
