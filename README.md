@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  Remote control your computer to pause / fast forward video.
+  Use your phone as a remote control for watching movies
 </p>
 
 <p align="center">

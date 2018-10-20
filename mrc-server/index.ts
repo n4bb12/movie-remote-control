@@ -1,32 +1,25 @@
-import Application from "koa"
-const app = new Application()
+import express from "express"
+import http from "http"
+import path from "path"
+import WebSocket from "ws"
 
-// logger
-
-app.use(async (ctx, next) => {
-  await next()
-  const rt = ctx.response.get("X-Response-Time")
-  console.log(`${ctx.method} ${ctx.url} - ${rt}`)
-})
-
-// x-response-time
-
-app.use(async (ctx, next) => {
-  const start = Date.now()
-  await next()
-  const ms = Date.now() - start
-  ctx.set("X-Response-Time", `${ms}ms`)
-})
-
-// response
-
-app.use(async ctx => {
-  ctx.body = "Hello World"
-})
-
-const protocol = "http"
-const host = "localhost"
 const port = 3000
+const webroot = path.join(__dirname, "..", "mrc-client")
 
-app.listen(port, host, () =>
-  console.log(`MRC-Server is listening on ${protocol}://${host}:${port}`))
+const app = express()
+const server = new http.Server(app)
+const wss = new WebSocket.Server({ server })
+
+app.use(express.static(webroot))
+
+wss.on("connection", ws => {
+  ws.on("message", message => {
+    console.log("server received: ", message)
+  })
+
+  ws.send("server")
+})
+
+server.listen(port, () => {
+  console.log(`MRC-Server is listening on http://localhost:${port}`)
+})
