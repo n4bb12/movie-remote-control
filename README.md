@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  Use your phone as a remote control for watching movies
+  Watch movies using your phone as a remote control
 </p>
 
 <p align="center">

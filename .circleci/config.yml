@@ -10,6 +10,7 @@ jobs:
             - yarn-cache-{{ .Branch }}-{{ checksum "yarn.lock" }}
             - yarn-cache-{{ .Branch }}
             - yarn-cache-
+      - run: sudo apt-get install libxtst-dev libpng++-dev
       - run: yarn install
       - save_cache:
           key: yarn-cache-{{ .Branch }}-{{ checksum "yarn.lock" }}
@@ -48,7 +49,7 @@ jobs:
     steps:
       - attach_workspace:
           at: .
-      - run: yarn build -c production
+      - run: yarn build
       - persist_to_workspace:
           root: .
           paths: dist

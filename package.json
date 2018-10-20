@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build": "run-p build:*",
-    "build:client": "ng build",
+    "build:client": "ng build -c production",
     "build:server": "tsc --project mrc-server/tsconfig.json",
     "dev": "run-p dev:*",
     "dev:client": "ng serve",
