@@ -26,7 +26,7 @@
   <!-- <a href="https://app.netlify.com/sites/movie-remote-control/deploys">
     <img alt="Netlify" src="https://img.shields.io/badge/netlify-movie-remote-control.netlify.com-00ad9f.svg?style=flat-square&logo=netlify">
   </a> -->
-  <a href="https://github.com/n4bb12/movie-remote-control/issues/new/choose">
+  <a href="https://github.com/n4bb12/movie-remote-control/issues/new">
     <img alt="Issues" src="https://flat.badgen.net/badge/github/create issue/pink?icon=github">
   </a>
 </p>

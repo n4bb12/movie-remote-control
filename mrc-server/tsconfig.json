@@ -5,7 +5,8 @@
     "lib": ["es2018"],
     "module": "commonjs",
     "outDir": "../dist/mrc-server",
-    "target": "es2015"
+    "target": "es2015",
+    "types": []
   },
   "extends": "../tsconfig.json"
 }

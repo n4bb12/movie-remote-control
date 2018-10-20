@@ -1,10 +1,10 @@
 {
   "$schema": "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "outDir": "../out-tsc/spec",
+    "outDir": "../out-tsc/test",
     "types": ["jasmine", "node"]
   },
   "extends": "../tsconfig.json",
   "files": ["test.ts", "polyfills.ts"],
-  "include": ["**/*.spec.ts", "**/*.d.ts"]
+  "include": ["**/*.test.ts", "**/*.d.ts"]
 }
