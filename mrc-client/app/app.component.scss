@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  width: 50vw;
+  margin: 0 auto;
+}
+
+div {
+  display: flex;
+}
+
+button,
+input {
+  flex: 1;
+  padding: .5rem;
+}
+
+.point {
+  height: 50vh;
+  border: 1px solid hsl(0, 0%, 87%);
+}

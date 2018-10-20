@@ -16,8 +16,7 @@ wss.on("connection", ws => {
   ws.on("message", message => {
     console.log("server received: ", message)
   })
-
-  ws.send("server")
+  ws.send("PONG")
 })
 
 server.listen(port, () => {

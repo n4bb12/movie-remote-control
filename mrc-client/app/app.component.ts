@@ -1,33 +1,46 @@
-import { Component, OnInit } from "@angular/core"
+import { Component } from "@angular/core"
+
+import { WebsocketService } from "./websocket.service"
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
 })
-export class AppComponent implements OnInit {
-  title = "movie-remote-control"
+export class AppComponent {
 
-  ngOnInit() {
-    if (!("WebSocket" in window)) {
-      alert("WebSocket NOT supported by your Browser!")
-      return
+  recentKeydown = ""
+
+  private isPointerDown = false
+
+  constructor(private ws: WebsocketService) { }
+
+  sendPointerdown(e: KeyboardEvent) {
+    console.log(e)
+    this.isPointerDown = true
+  }
+
+  sendPointermove(e: KeyboardEvent) {
+    if (this.isPointerDown) {
+      console.log(e)
     }
+  }
 
-    const ws = new WebSocket("ws://localhost:3000")
+  sendPointerup(e: KeyboardEvent) {
+    console.log(e)
+    this.isPointerDown = false
+  }
 
-    ws.onopen = () => {
-      ws.send("browser")
-      console.log("client sent:", "client")
-    }
+  sendCommand(command: string) {
+    this.ws.send(command)
+  }
 
-    ws.onmessage = evt => {
-      console.log("client received:", evt.data)
-    }
-
-    ws.onclose = () => {
-      console.log("connection closed...")
-    }
+  sendKey(e: KeyboardEvent) {
+    console.log(e)
+    e.preventDefault()
+    const message = ["KEY", JSON.stringify(e.which)].join("|")
+    this.ws.send(message)
+    this.recentKeydown = e.key || ""
   }
 
 }

@@ -1,2 +1,35 @@
-<h1>{{ title }}</h1>
+<h1>movie-remote-control</h1>
+
+<div
+  class="point"
+  (pointerdown)="sendPointerdown($event)"
+  (pointermove)="sendPointermove($event)"
+  (pointerup)="sendPointerup($event)"
+></div>
+
+<div>
+  <button
+    type="button"
+    (click)="sendCommand('REWIND')"
+  >Rewind</button>
+  <button
+    type="button"
+    (click)="sendCommand('PAUSE')"
+  >Pause</button>
+  <button
+    type="button"
+    (click)="sendCommand('FORWARD')"
+  >Forward</button>
+</div>
+
+<div>
+  <input
+    #input
+    type="text"
+    placeholder="Input"
+    [value]="recentKeydown"
+    (keydown)="sendKey($event)"
+  />
+</div>
+
 <router-outlet></router-outlet>
