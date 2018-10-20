@@ -1,0 +1,100 @@
+version: 2
+jobs:
+  install:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-cache-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-cache-{{ .Branch }}
+            - yarn-cache-
+      - run: yarn install
+      - save_cache:
+          key: yarn-cache-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths: node_modules
+      - persist_to_workspace:
+          root: .
+          paths: .
+
+  lint:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - attach_workspace:
+          at: .
+      - run: yarn lint -c production
+
+  test_unit:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - attach_workspace:
+          at: .
+      - run: yarn test -c production
+
+  test_e2e:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - attach_workspace:
+          at: .
+      - run: yarn e2e -c production
+
+  build_app:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - attach_workspace:
+          at: .
+      - run: yarn build -c production
+      - persist_to_workspace:
+          root: .
+          paths: dist
+
+  build_docker:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - attach_workspace:
+          at: .
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Build docker image
+          command: |
+            name=$(node -p "require('./package.json').name")
+            version=$(node -p "require('./package.json').version")
+            image=$DOCKER_USER/$name:$version-$CIRCLE_BUILD_NUM
+            docker build -t $image .
+            # docker tag $image $DOCKER_USER/$name:latest
+            # docker login -u $DOCKER_USER -p "$DOCKER_PASS"
+            # docker push $DOCKER_USER/$name
+
+workflows:
+  version: 2
+  default:
+    jobs:
+      - install
+      - lint:
+          requires:
+            - install
+      - test_unit:
+          requires:
+            - install
+      - test_e2e:
+          requires:
+            - install
+      - build_app:
+          requires:
+            - install
+      - build_docker:
+          requires:
+            - test_unit
+            - test_e2e
+            - build_app
+          # filters:
+          #   branches:
+          #     only:
+          #       - master

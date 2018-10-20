@@ -1,27 +1,65 @@
-# MovieRemoteControl
+<h1 align="center">
+  <img alt="Logo" src="https://image.flaticon.com/icons/svg/421/421829.svg" height="48">
+  Movie Remote Control
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
+<p align="center">
+  Remote control your computer to pause / fast forward video.
+</p>
 
-## Development server
+<p align="center">
+  <a href="https://circleci.com/gh/n4bb12/workflows/movie-remote-control">
+    <img alt="CircleCI" src="https://flat.badgen.net/circleci/github/n4bb12/movie-remote-control?icon=circleci">
+  </a>
+  <!-- <a href="https://lgtm.com/projects/g/n4bb12/movie-remote-control/alerts">
+    <img alt="LGTM" src="https://flat.badgen.net/lgtm/alerts/g/n4bb12/movie-remote-control?icon=lgtm">
+  </a> -->
+  <!-- <a href="https://david-dm.org/n4bb12/movie-remote-control">
+    <img alt="Dependencies" src="https://flat.badgen.net/david/dep/n4bb12/movie-remote-control?icon=npm">
+  </a> -->
+  <a href="https://raw.githubusercontent.com/n4bb12/movie-remote-control/master/LICENSE">
+    <img alt="License" src="https://flat.badgen.net/github/license/n4bb12/movie-remote-control?icon=github">
+  </a>
+  <!-- <a href="https://hub.docker.com/r/n4bb1/movie-remote-control">
+    <img alt="Docker" src="https://flat.badgen.net/badge/docker/n4bb1%2Fmovie-remote-control/22b8eb?icon=docker">
+  </a> -->
+  <!-- <a href="https://app.netlify.com/sites/movie-remote-control/deploys">
+    <img alt="Netlify" src="https://img.shields.io/badge/netlify-movie-remote-control.netlify.com-00ad9f.svg?style=flat-square&logo=netlify">
+  </a> -->
+  <a href="https://github.com/n4bb12/movie-remote-control/issues/new/choose">
+    <img alt="Issues" src="https://flat.badgen.net/badge/github/create issue/pink?icon=github">
+  </a>
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<!-- ## Run with Docker
 
-## Code scaffolding
+Quickly test it out:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```text
+docker run \
+  --name movie-remote-control \
+  --publish 8080:80 \
+  --interactive \
+  --tty \
+  --rm \
+  n4bb1/movie-remote-control:0.0.0-1
+```
 
-## Build
+Autostart it:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```text
+docker run \
+  --name movie-remote-control \
+  --publish 8080:80 \
+  --interactive \
+  --tty \
+  --detach \
+  --restart unless-stopped \
+  n4bb1/movie-remote-control:0.0.0-1
+``` -->
 
-## Running unit tests
+<!-- ## Run with Node.js -->
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Logo made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/free-icon/television_421829" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
