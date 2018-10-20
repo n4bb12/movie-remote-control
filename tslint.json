@@ -1,6 +1,7 @@
 {
-  "rulesDirectory": [
-    "node_modules/codelyzer"
+  "$schema": "http://json.schemastore.org/tslint",
+  "extends": [
+    "@n4bb12/config-tslint"
   ],
   "rules": {
     "arrow-return-shorthand": true,
@@ -10,10 +11,12 @@
       true,
       "check-space"
     ],
+    "component-class-suffix": true,
     "curly": true,
     "deprecation": {
       "severity": "warn"
     },
+    "directive-class-suffix": true,
     "eofline": true,
     "forin": true,
     "import-blacklist": [
@@ -63,8 +66,11 @@
       true,
       "ignore-params"
     ],
+    "no-input-rename": true,
     "no-misused-new": true,
     "no-non-null-assertion": true,
+    "no-output-on-prefix": true,
+    "no-output-rename": true,
     "no-redundant-jsdoc": true,
     "no-shadowed-variable": true,
     "no-string-literal": false,
@@ -75,7 +81,6 @@
     "no-unused-expression": true,
     "no-use-before-declare": true,
     "no-var-keyword": true,
-    "object-literal-sort-keys": false,
     "one-line": [
       true,
       "check-open-brace",
@@ -108,6 +113,11 @@
       }
     ],
     "unified-signatures": true,
+    "use-host-property-decorator": true,
+    "use-input-property-decorator": true,
+    "use-life-cycle-interface": true,
+    "use-output-property-decorator": true,
+    "use-pipe-transform-interface": true,
     "variable-name": false,
     "whitespace": [
       true,
@@ -116,16 +126,9 @@
       "check-operator",
       "check-separator",
       "check-type"
-    ],
-    "no-output-on-prefix": true,
-    "use-input-property-decorator": true,
-    "use-output-property-decorator": true,
-    "use-host-property-decorator": true,
-    "no-input-rename": true,
-    "no-output-rename": true,
-    "use-life-cycle-interface": true,
-    "use-pipe-transform-interface": true,
-    "component-class-suffix": true,
-    "directive-class-suffix": true
-  }
+    ]
+  },
+  "rulesDirectory": [
+    "node_modules/codelyzer"
+  ]
 }
