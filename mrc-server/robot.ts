@@ -1,6 +1,12 @@
 import robot from "robotjs"
-import { Key } from "ts-keycode-enum"
 
-export function tapKey(key: Key) {
-  robot.keyTap("space")
+import { getRobotJSKey } from "./keymap"
+
+export function tap(key: string): boolean {
+  const robotKey = getRobotJSKey(key)
+  if (robotKey) {
+    console.log(JSON.stringify({ key, robotKey }, null, 2))
+    robot.keyTap(robotKey)
+  }
+  return !!robotKey
 }

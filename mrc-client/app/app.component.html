@@ -1,4 +1,4 @@
-<h1>movie-remote-control</h1>
+<h2>movie-remote-control</h2>
 
 <div
   class="point"
@@ -10,15 +10,15 @@
 <div>
   <button
     type="button"
-    (click)="sendKey(37)"
+    (click)="pressKey('ArrowLeft')"
   >Rewind</button>
   <button
     type="button"
-    (click)="sendKey(32)"
+    (click)="pressKey(' ')"
   >Pause</button>
   <button
     type="button"
-    (click)="sendKey(39)"
+    (click)="pressKey('ArrowRight')"
   >Forward</button>
 </div>
 
@@ -28,13 +28,16 @@
     type="text"
     placeholder="Input"
     [value]="recentKeydown"
-    (keydown)="sendKey($event)"
+    (keydown)="handleKeydown($event)"
   />
 </div>
 
-<h1>server-response</h1>
+<h2>server-response</h2>
 <div>
-  <textarea [value]="history"></textarea>
+  <textarea
+    [value]="history"
+    [disabled]="true"
+  ></textarea>
 </div>
 
 <router-outlet></router-outlet>

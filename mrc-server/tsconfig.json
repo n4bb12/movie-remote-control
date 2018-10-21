@@ -6,7 +6,7 @@
     "module": "commonjs",
     "outDir": "../dist/mrc-server",
     "target": "es2015",
-    "types": []
+    "types": ["node"]
   },
   "extends": "../tsconfig.json"
 }

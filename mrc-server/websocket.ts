@@ -1,7 +1,7 @@
 import { Server } from "http"
 import WebSocket from "ws"
 
-import { tapKey } from "./robot"
+import { tap } from "./robot"
 
 export function acceptWebsocketConnections(server: Server) {
   const wss = new WebSocket.Server({ server })
@@ -10,7 +10,8 @@ export function acceptWebsocketConnections(server: Server) {
     ws.on("message", (message: string) => {
       console.log("server received: ", message)
 
-      const [command, key] = message.split("|")
+      const [command, data] = message.split("|")
+      const { key } = JSON.parse(data || "{}")
 
       switch (command) {
         case "PING":
@@ -18,7 +19,11 @@ export function acceptWebsocketConnections(server: Server) {
           break
 
         case "KEY":
-          tapKey(Number.parseInt(key, 10))
+          if (tap(key)) {
+            ws.send("KEY pressed: " + data)
+          } else {
+            ws.send("KEY not mapped: " + data)
+          }
           break
 
         default:

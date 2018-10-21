@@ -4,7 +4,7 @@ import path from "path"
 
 import { acceptWebsocketConnections } from "./websocket"
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3200
 const webroot = path.join(__dirname, "..", "mrc-client")
 
 const app = express()

@@ -1,7 +1,5 @@
 import { Component } from "@angular/core"
 
-import { Key } from "ts-keycode-enum"
-
 import { WebsocketService } from "./websocket.service"
 
 @Component({
@@ -36,15 +34,15 @@ export class AppComponent {
     this.isPointerDown = false
   }
 
-  handleKey(e: KeyboardEvent) {
-    console.log(e)
+  handleKeydown(e: KeyboardEvent) {
     e.preventDefault()
-    this.recentKeydown = e.key || ""
-    this.sendKey(e.which)
+    this.pressKey(e.key)
   }
 
-  sendKey(key: Key) {
-    const message = ["KEY", key].join("|")
+  pressKey(key: string) {
+    const data = JSON.stringify({ key })
+    const message = ["KEY", data].join("|")
+    this.recentKeydown = key
     this.ws.send(message)
   }
 
