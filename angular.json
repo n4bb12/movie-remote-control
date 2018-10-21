@@ -21,8 +21,8 @@
               "extractLicenses": true,
               "fileReplacements": [
                 {
-                  "replace": "mrc-client/environments/environment.ts",
-                  "with": "mrc-client/environments/environment.prod.ts"
+                  "replace": "remote-control/environments/environment.ts",
+                  "with": "remote-control/environments/environment.prod.ts"
                 }
               ],
               "namedChunks": false,
@@ -34,17 +34,17 @@
           },
           "options": {
             "assets": [
-              "mrc-client/favicon.ico",
-              "mrc-client/assets",
-              "mrc-client/robots.txt"
+              "remote-control/favicon.ico",
+              "remote-control/assets",
+              "remote-control/robots.txt"
             ],
-            "index": "mrc-client/index.html",
-            "main": "mrc-client/main.ts",
-            "outputPath": "dist/mrc-client",
-            "polyfills": "mrc-client/polyfills.ts",
+            "index": "remote-control/index.html",
+            "main": "remote-control/main.ts",
+            "outputPath": "dist/remote-control",
+            "polyfills": "remote-control/polyfills.ts",
             "scripts": [],
-            "styles": ["mrc-client/styles.scss"],
-            "tsConfig": "mrc-client/tsconfig.app.json"
+            "styles": ["remote-control/styles.scss"],
+            "tsConfig": "remote-control/tsconfig.app.json"
           }
         },
         "extract-i18n": {
@@ -64,8 +64,8 @@
             "exclude": ["**/node_modules/**"],
             "fix": true,
             "tsConfig": [
-              "mrc-client/tsconfig.app.json",
-              "mrc-client/tsconfig.test.json"
+              "remote-control/tsconfig.app.json",
+              "remote-control/tsconfig.test.json"
             ]
           }
         },
@@ -94,28 +94,28 @@
           },
           "options": {
             "assets": [
-              "mrc-client/favicon.ico",
-              "mrc-client/assets",
-              "mrc-client/robots.txt"
+              "remote-control/favicon.ico",
+              "remote-control/assets",
+              "remote-control/robots.txt"
             ],
-            "karmaConfig": "mrc-client/karma.conf.js",
-            "main": "mrc-client/test.ts",
-            "polyfills": "mrc-client/polyfills.ts",
+            "karmaConfig": "remote-control/karma.conf.js",
+            "main": "remote-control/test.ts",
+            "polyfills": "remote-control/polyfills.ts",
             "scripts": [],
-            "styles": ["mrc-client/styles.scss"],
-            "tsConfig": "mrc-client/tsconfig.test.json"
+            "styles": ["remote-control/styles.scss"],
+            "tsConfig": "remote-control/tsconfig.test.json"
           }
         }
       },
       "prefix": "app",
       "projectType": "application",
-      "root": "mrc-client/",
+      "root": "remote-control/",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
         }
       },
-      "sourceRoot": "mrc-client/"
+      "sourceRoot": "remote-control/"
     },
     "client-e2e": {
       "architect": {
@@ -124,12 +124,12 @@
           "configurations": {
             "production": {
               "devServerTarget": "client:serve:production",
-              "protractorConfig": "mrc-client/protractor-ci.conf.js"
+              "protractorConfig": "remote-control/protractor-ci.conf.js"
             }
           },
           "options": {
             "devServerTarget": "client:serve",
-            "protractorConfig": "mrc-client/protractor.conf.js"
+            "protractorConfig": "remote-control/protractor.conf.js"
           }
         },
         "lint": {
@@ -142,13 +142,13 @@
           "options": {
             "exclude": ["**/node_modules/**"],
             "fix": true,
-            "tsConfig": "mrc-client/tsconfig.e2e.json"
+            "tsConfig": "remote-control/tsconfig.e2e.json"
           }
         }
       },
       "prefix": "",
       "projectType": "application",
-      "root": "mrc-client/e2e/"
+      "root": "remote-control/e2e/"
     }
   },
   "version": 1
