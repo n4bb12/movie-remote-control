@@ -1,6 +1,6 @@
 [build]
   command = "yarn build -c production"
-  publish = "dist/remote-control"
+  publish = "dist/client"
 
 [[redirects]]
   from = "/*"

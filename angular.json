@@ -21,8 +21,8 @@
               "extractLicenses": true,
               "fileReplacements": [
                 {
-                  "replace": "remote-control/environments/environment.ts",
-                  "with": "remote-control/environments/environment.prod.ts"
+                  "replace": "client/environments/environment.ts",
+                  "with": "client/environments/environment.prod.ts"
                 }
               ],
               "namedChunks": false,
@@ -34,17 +34,17 @@
           },
           "options": {
             "assets": [
-              "remote-control/favicon.ico",
-              "remote-control/assets",
-              "remote-control/robots.txt"
+              "client/favicon.ico",
+              "client/assets",
+              "client/robots.txt"
             ],
-            "index": "remote-control/index.html",
-            "main": "remote-control/main.ts",
-            "outputPath": "dist/remote-control",
-            "polyfills": "remote-control/polyfills.ts",
+            "index": "client/index.html",
+            "main": "client/main.ts",
+            "outputPath": "dist/client",
+            "polyfills": "client/polyfills.ts",
             "scripts": [],
-            "styles": ["remote-control/styles.scss"],
-            "tsConfig": "remote-control/tsconfig.json"
+            "styles": ["client/styles.scss"],
+            "tsConfig": "client/tsconfig.json"
           }
         },
         "extract-i18n": {
@@ -63,7 +63,7 @@
           "options": {
             "exclude": ["**/node_modules/**"],
             "fix": true,
-            "tsConfig": ["remote-control/tsconfig.json"]
+            "tsConfig": ["client/tsconfig.json"]
           }
         },
         "serve": {
@@ -76,19 +76,20 @@
           },
           "options": {
             "browserTarget": "client:build",
-            "open": true
+            "open": true,
+            "port": 4200
           }
         }
       },
       "prefix": "app",
       "projectType": "application",
-      "root": "remote-control/",
+      "root": "client/",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
         }
       },
-      "sourceRoot": "remote-control/"
+      "sourceRoot": "client/"
     }
   },
   "version": 1

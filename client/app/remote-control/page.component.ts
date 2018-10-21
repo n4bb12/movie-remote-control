@@ -1,16 +1,15 @@
 import { Component } from "@angular/core"
 
-import { WebsocketService } from "./websocket.service"
+import { WebsocketService } from "client/app/websocket.service"
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"],
+  selector: "app-remote-control-page",
+  templateUrl: "./page.component.html",
+  styleUrls: ["./page.component.scss"],
 })
-export class AppComponent {
+export class PageComponent {
 
   recentKeydown = ""
-  history = ""
 
   private isPointerDown = false
 

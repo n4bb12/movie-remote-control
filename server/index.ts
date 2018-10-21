@@ -5,7 +5,7 @@ import path from "path"
 import { acceptWebsocketConnections } from "./websocket"
 
 const port = process.env.PORT || 3200
-const webroot = path.join(__dirname, "..", "remote-control")
+const webroot = path.join(__dirname, "..", "client")
 
 const app = express()
 const server = new http.Server(app)

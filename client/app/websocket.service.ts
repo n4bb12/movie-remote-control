@@ -1,7 +1,5 @@
 import { Injectable } from "@angular/core"
 
-import { ReplaySubject } from "rxjs"
-
 import { environment } from "../environments/environment"
 
 @Injectable({
