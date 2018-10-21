@@ -8,10 +8,11 @@
   padding: 1rem;
   margin: 0 auto;
   background: #3e3d42;
-  color: white;
+  color: #acabb1;
 }
 
 .mousepad {
+  position: relative;
   flex: 1;
   background: #57565c;
   border-radius: .5rem;
@@ -28,8 +29,9 @@
     min-width: 0;
     width: 100%;
     border: 0;
-    background: #57565c;
     border-radius: .5rem;
+    background: #57565c;
+    color: #acabb1;
   }
 
   .recent {
@@ -93,11 +95,14 @@
   }
 }
 
-img {
+img,
+svg {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 50%;
   height: 50%;
+  max-width: 3rem;
+  max-height: 3rem;
   transform: translate(-50%, -50%);
 }
