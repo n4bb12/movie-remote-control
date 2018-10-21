@@ -8,7 +8,7 @@ export function acceptWebsocketConnections(server: Server) {
 
   wss.on("connection", ws => {
     ws.on("message", (message: string) => {
-      console.log("server received: ", message)
+      console.log("server received:", message)
 
       const [command, data] = message.split("|")
       const { key } = JSON.parse(data || "{}")
