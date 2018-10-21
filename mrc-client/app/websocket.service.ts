@@ -9,11 +9,15 @@ import { environment } from "../environments/environment"
 })
 export class WebsocketService {
 
+  private readonly url = `ws://${environment.ws.host}:${environment.ws.port}`
   private ws: WebSocket
 
   constructor() {
-    const url = `ws://${environment.ws.host}:${environment.ws.port}`
-    const ws = this.ws = new WebSocket(url)
+    this.connect()
+  }
+
+  private connect() {
+    const ws = this.ws = new WebSocket(this.url)
 
     ws.onopen = () => {
       console.log("connection opened")
@@ -26,7 +30,8 @@ export class WebsocketService {
     }
 
     ws.onclose = () => {
-      console.log("connection closed")
+      console.log("connection closed, reconnecting in 5s...")
+      setTimeout(() => this.connect(), 5000)
     }
   }
 
