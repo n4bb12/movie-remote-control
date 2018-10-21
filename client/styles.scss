@@ -1,4 +1,5 @@
 @import '~normalize-scss/sass/normalize/import-now';
+@import url('https://fonts.googleapis.com/css?family=Krub');
 
 * {
   box-sizing: border-box;
@@ -8,4 +9,5 @@ html,
 body {
   width: 100%;
   height: 100%;
+  font-family: 'Krub', sans-serif;
 }

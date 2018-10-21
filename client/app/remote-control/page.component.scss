@@ -7,52 +7,97 @@
   max-width: 25rem;
   padding: 1rem;
   margin: 0 auto;
-  background: #333333;
+  background: #3e3d42;
   color: white;
-}
-
-.controls {
-  margin: .5rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pause,
-.wind,
-.keyboard {
-  display: block;
-  padding: .5rem;
-}
-
-.pause,
-.wind {
-  margin: .25rem;
-  border: 0;
-  border-radius: 50%;
-}
-
-.pause {
-  width: 30vw;
-  height: 30vw;
-}
-
-.wind {
-  width: 20vw;
-  height: 20vw;
-  border: 0;
-  border-radius: 50%;
-}
-
-.keyboard {
-  min-width: 0;
-  width: 100%;
-  border: 0;
-  background: #444444;
 }
 
 .mousepad {
   flex: 1;
-  background: #444444;
-  border-radius: 1rem;
+  background: #57565c;
+  border-radius: .5rem;
+}
+
+.keyboard {
+  position: relative;
+  margin-top: 1rem;
+  user-select: none;
+
+  .input {
+    display: block;
+    padding: 1rem;
+    min-width: 0;
+    width: 100%;
+    border: 0;
+    background: #57565c;
+    border-radius: .5rem;
+  }
+
+  .recent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+}
+
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.pause,
+.wind {
+  position: relative;
+  display: block;
+  padding: 1rem;
+  margin: .25rem;
+  border-radius: 50%;
+  background: #acabb1;
+}
+
+.pause {
+  width: 8rem;
+  height: 8rem;
+}
+
+.wind {
+  width: 4rem;
+  height: 4rem;
+}
+
+.volume {
+  position: relative;
+  background: #57565c;
+  height: 1rem;
+  border-radius: .5rem;
+  margin: 2rem 0 1rem;
+
+  .knob {
+    position: relative;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background: #acabb1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
 }

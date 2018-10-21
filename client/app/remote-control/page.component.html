@@ -5,31 +5,44 @@
   (pointerup)="handlePointerup($event)"
 ></div>
 
+<div class="keyboard">
+  <input
+    #input
+    type="text"
+    class="input"
+    (keydown)="handleKeydown($event)"
+  />
+  <label class="recent">
+    {{recentKeydown}}
+  </label>
+</div>
+
 <div class="controls">
   <button
     type="button"
     class="wind"
     (click)="pressKey('ArrowLeft'); pressKey('Enter')"
-  >Rewind</button>
+  >
+    <img src="assets/icons/rewind.svg" /></button>
   <button
     type="button"
     class="pause"
     (click)="pressKey(' ')"
-  >Pause</button>
+  >
+    <img src="assets/icons/pause.svg" /></button>
   <button
     type="button"
     class="wind"
     (click)="pressKey('ArrowRight'); pressKey('Enter')"
-  >Forward</button>
+  >
+    <img src="assets/icons/fast-forward.svg" /></button>
 </div>
 
-<div>
-  <input
-    #input
-    type="text"
-    class="keyboard"
-    placeholder="Input"
-    [value]="recentKeydown"
-    (keydown)="handleKeydown($event)"
-  />
+<div class="volume">
+  <button
+    type="button"
+    class="knob"
+  >
+    <img src="assets/icons/speaker-5.svg" />
+  </button>
 </div>
