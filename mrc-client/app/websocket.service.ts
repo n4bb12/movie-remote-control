@@ -10,9 +10,6 @@ import { environment } from "../environments/environment"
 export class WebsocketService {
 
   private ws: WebSocket
-  private historyStr = ""
-
-  readonly history = new ReplaySubject<string>(1)
 
   constructor() {
     const url = `ws://${environment.ws.host}:${environment.ws.port}`
@@ -26,8 +23,6 @@ export class WebsocketService {
     ws.onmessage = evt => {
       const message = evt.data
       console.log("client received:", message)
-      this.historyStr += "\n" + message
-      this.history.next(this.historyStr.trim())
     }
 
     ws.onclose = () => {

@@ -7,6 +7,11 @@ export function acceptWebsocketConnections(server: Server) {
   const wss = new WebSocket.Server({ server })
 
   wss.on("connection", ws => {
+    function send(message: string) {
+      ws.send(message)
+      console.log("server sent:", message)
+    }
+
     ws.on("message", (message: string) => {
       console.log("server received:", message)
 
@@ -15,14 +20,14 @@ export function acceptWebsocketConnections(server: Server) {
 
       switch (command) {
         case "PING":
-          ws.send("PONG")
+          send("PONG")
           break
 
         case "KEY":
           if (tap(key)) {
-            ws.send("KEY pressed: " + data)
+            send("KEY pressed: " + data)
           } else {
-            ws.send("KEY not mapped: " + data)
+            send("KEY not mapped: " + data)
           }
           break
 

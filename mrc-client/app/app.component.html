@@ -1,5 +1,3 @@
-<h2>movie-remote-control</h2>
-
 <div
   class="point"
   (pointerdown)="handlePointerdown($event)"
@@ -30,14 +28,6 @@
     [value]="recentKeydown"
     (keydown)="handleKeydown($event)"
   />
-</div>
-
-<h2>server-response</h2>
-<div>
-  <textarea
-    [value]="history"
-    [disabled]="true"
-  ></textarea>
 </div>
 
 <router-outlet></router-outlet>

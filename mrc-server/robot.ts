@@ -5,7 +5,7 @@ import { getRobotJSKey } from "./keymap"
 export function tap(key: string): boolean {
   const robotKey = getRobotJSKey(key)
   if (robotKey) {
-    console.log(JSON.stringify({ key, robotKey }, null, 2))
+    console.log(JSON.stringify({ key, robotKey }))
     robot.keyTap(robotKey)
   }
   return !!robotKey

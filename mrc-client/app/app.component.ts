@@ -15,7 +15,6 @@ export class AppComponent {
   private isPointerDown = false
 
   constructor(private ws: WebsocketService) {
-    ws.history.subscribe(history => this.history = history)
   }
 
   handlePointerdown(e: KeyboardEvent) {
