@@ -44,7 +44,7 @@
             "polyfills": "remote-control/polyfills.ts",
             "scripts": [],
             "styles": ["remote-control/styles.scss"],
-            "tsConfig": "remote-control/tsconfig.app.json"
+            "tsConfig": "remote-control/tsconfig.json"
           }
         },
         "extract-i18n": {
@@ -63,10 +63,7 @@
           "options": {
             "exclude": ["**/node_modules/**"],
             "fix": true,
-            "tsConfig": [
-              "remote-control/tsconfig.app.json",
-              "remote-control/tsconfig.test.json"
-            ]
+            "tsConfig": ["remote-control/tsconfig.json"]
           }
         },
         "serve": {
@@ -81,30 +78,6 @@
             "browserTarget": "client:build",
             "open": true
           }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "configurations": {
-            "production": {
-              "browsers": "ChromeHeadlessCI",
-              "codeCoverage": true,
-              "progress": false,
-              "watch": false
-            }
-          },
-          "options": {
-            "assets": [
-              "remote-control/favicon.ico",
-              "remote-control/assets",
-              "remote-control/robots.txt"
-            ],
-            "karmaConfig": "remote-control/karma.conf.js",
-            "main": "remote-control/test.ts",
-            "polyfills": "remote-control/polyfills.ts",
-            "scripts": [],
-            "styles": ["remote-control/styles.scss"],
-            "tsConfig": "remote-control/tsconfig.test.json"
-          }
         }
       },
       "prefix": "app",
@@ -116,39 +89,6 @@
         }
       },
       "sourceRoot": "remote-control/"
-    },
-    "client-e2e": {
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "configurations": {
-            "production": {
-              "devServerTarget": "client:serve:production",
-              "protractorConfig": "remote-control/protractor-ci.conf.js"
-            }
-          },
-          "options": {
-            "devServerTarget": "client:serve",
-            "protractorConfig": "remote-control/protractor.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "configurations": {
-            "production": {
-              "fix": false
-            }
-          },
-          "options": {
-            "exclude": ["**/node_modules/**"],
-            "fix": true,
-            "tsConfig": "remote-control/tsconfig.e2e.json"
-          }
-        }
-      },
-      "prefix": "",
-      "projectType": "application",
-      "root": "remote-control/e2e/"
     }
   },
   "version": 1

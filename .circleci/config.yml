@@ -27,22 +27,6 @@ jobs:
           at: .
       - run: yarn lint -c production
 
-  test_unit:
-    docker:
-      - image: circleci/node:10-browsers
-    steps:
-      - attach_workspace:
-          at: .
-      - run: yarn test -c production
-
-  test_e2e:
-    docker:
-      - image: circleci/node:10-browsers
-    steps:
-      - attach_workspace:
-          at: .
-      - run: yarn e2e -c production
-
   build_app:
     docker:
       - image: circleci/node:10
@@ -81,19 +65,11 @@ workflows:
       - lint:
           requires:
             - install
-      - test_unit:
-          requires:
-            - install
-      - test_e2e:
-          requires:
-            - install
       - build_app:
           requires:
             - install
       - build_docker:
           requires:
-            - test_unit
-            - test_e2e
             - build_app
           # filters:
           #   branches:
