@@ -1,4 +1,5 @@
 import express from "express"
+import history from "express-history-api-fallback"
 import http from "http"
 import path from "path"
 
@@ -13,6 +14,7 @@ const server = new http.Server(app)
 acceptWebsocketConnections(server)
 
 app.use(express.static(webroot))
+app.use(history("index.html", { root: webroot }))
 
 server.listen(port, () => {
   console.log(`Server is listening on http://localhost:${port}`)
