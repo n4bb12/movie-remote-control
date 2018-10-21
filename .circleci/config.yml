@@ -25,7 +25,7 @@ jobs:
     steps:
       - attach_workspace:
           at: .
-      - run: yarn lint -c production
+      - run: yarn lint
 
   build_app:
     docker:

@@ -1,21 +1,24 @@
 <div
-  class="point"
+  class="mousepad"
   (pointerdown)="handlePointerdown($event)"
   (pointermove)="handlePointermove($event)"
   (pointerup)="handlePointerup($event)"
 ></div>
 
-<div>
+<div class="controls">
   <button
     type="button"
+    class="wind"
     (click)="pressKey('ArrowLeft'); pressKey('Enter')"
   >Rewind</button>
   <button
     type="button"
+    class="pause"
     (click)="pressKey(' ')"
   >Pause</button>
   <button
     type="button"
+    class="wind"
     (click)="pressKey('ArrowRight'); pressKey('Enter')"
   >Forward</button>
 </div>
@@ -24,6 +27,7 @@
   <input
     #input
     type="text"
+    class="keyboard"
     placeholder="Input"
     [value]="recentKeydown"
     (keydown)="handleKeydown($event)"
