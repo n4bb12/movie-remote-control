@@ -4,7 +4,7 @@
     "baseUrl": "./",
     "lib": ["es2018"],
     "module": "commonjs",
-    "outDir": "../dist/mrc-server",
+    "outDir": "../dist/server",
     "target": "es2015",
     "types": ["node"]
   },

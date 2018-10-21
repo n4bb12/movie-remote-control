@@ -15,5 +15,5 @@ acceptWebsocketConnections(server)
 app.use(express.static(webroot))
 
 server.listen(port, () => {
-  console.log(`MRC-Server is listening on http://localhost:${port}`)
+  console.log(`Server is listening on http://localhost:${port}`)
 })

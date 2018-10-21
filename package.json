@@ -15,20 +15,20 @@
   "license": "ISC",
   "author": "Abraham Schilling",
   "bin": {
-    "mrc-server": "dist/mrc-server"
+    "server": "dist/server"
   },
   "scripts": {
     "build": "run-p build:*",
     "build:client": "ng build -c production",
-    "build:server": "tsc --project mrc-server/tsconfig.json",
+    "build:server": "tsc --project server/tsconfig.json",
     "dev": "run-p dev:*",
     "dev:client": "ng serve",
-    "dev:server": "nodemon --watch mrc-server --ext ts --exec yarn ts-node --project mrc-server/tsconfig.json mrc-server",
-    "prod": "yarn build && cross-env PORT=3000 node dist/mrc-server",
+    "dev:server": "nodemon --watch server --ext ts --exec yarn ts-node --project server/tsconfig.json server",
+    "prod": "yarn build && cross-env PORT=3000 node dist/server",
     "e2e": "ng e2e",
     "lint": "run-p lint:*",
     "lint:client": "ng lint",
-    "lint:server": "tslint --project mrc-server",
+    "lint:server": "tslint --project server",
     "test": "ng test"
   },
   "dependencies": {
