@@ -1,6 +1,7 @@
 import { Component } from "@angular/core"
 
 import { WebsocketService } from "client/app/websocket.service"
+import { Subject } from "rxjs"
 
 @Component({
   selector: "app-remote-control-page",
@@ -9,12 +10,12 @@ import { WebsocketService } from "client/app/websocket.service"
 })
 export class PageComponent {
 
-  recentKeydown = ""
+  recentKeydown = new Subject<string>()
+  private recentKeydownDisplayTimeout = null
 
   private isPointerDown = false
 
-  constructor(private ws: WebsocketService) {
-  }
+  constructor(private ws: WebsocketService) { }
 
   handlePointerdown(e: KeyboardEvent) {
     console.log(e)
@@ -40,8 +41,16 @@ export class PageComponent {
   pressKey(key: string) {
     const data = JSON.stringify({ key })
     const message = ["KEY", data].join("|")
-    this.recentKeydown = key
+    this.setRecentKeydown(key)
     this.ws.send(message)
+  }
+
+  private setRecentKeydown(key: string): void {
+    this.recentKeydown.next(key)
+    clearTimeout(this.recentKeydownDisplayTimeout)
+    this.recentKeydownDisplayTimeout = setTimeout(() => {
+      this.recentKeydown.next()
+    }, 1000)
   }
 
 }
