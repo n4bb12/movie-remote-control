@@ -8,7 +8,7 @@ Things I would like to be able to do with this app:
 🔳️ change volume (arrow up/down)
 🔳️ mouse (click different movie / switch focus)
 ✅ keyboard input (search movie)
-🔳️ connect with qr-code
+✅ connect with qr-code
 🔳️ start server as global node binary
 🔳️ start server as docker container (if this is at all possible)
 ✅ mobile homescreen icon
