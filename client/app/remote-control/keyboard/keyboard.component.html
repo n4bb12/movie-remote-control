@@ -4,6 +4,10 @@
     type="text"
     class="input"
     (keydown)="handleKeydown($event)"
+    spellcheck="false"
+    autocorrect="off"
+    autocomplete="off"
+    autocapitalize="off"
   />
   <label class="recent">
     {{ recentKeydown | async }}
