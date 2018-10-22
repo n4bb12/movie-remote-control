@@ -3,11 +3,12 @@
     #input
     type="text"
     class="input"
-    (keydown)="handleKeydown($event)"
     spellcheck="false"
     autocorrect="off"
     autocomplete="off"
     autocapitalize="off"
+    (keydown)="handleKeydown($event)"
+    (input)="handleInput($event); input.value = ''"
   />
   <label class="recent">
     {{ recentKeydown | async }}

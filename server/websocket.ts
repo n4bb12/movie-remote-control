@@ -24,7 +24,7 @@ export function acceptWebsocketConnections(server: Server) {
           break
 
         case "KEY":
-          if (tap(key)) {
+          if (key && tap(key)) {
             send("KEY pressed: " + data)
           } else {
             send("KEY not mapped: " + data)
