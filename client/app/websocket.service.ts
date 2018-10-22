@@ -33,6 +33,12 @@ export class WebsocketService {
     }
   }
 
+  pressKey(key: string) {
+    const data = JSON.stringify({ key })
+    const message = ["KEY", data].join("|")
+    this.send(message)
+  }
+
   send(message: string) {
     this.ws.send(message)
     console.log("client sent:", message)

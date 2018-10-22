@@ -1,0 +1,27 @@
+:host {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.pause,
+.wind {
+  position: relative;
+  display: block;
+  padding: 1rem;
+  margin: .25rem;
+  border-radius: 50%;
+  background: #acabb1;
+}
+
+.pause {
+  width: 8rem;
+  height: 8rem;
+}
+
+.wind {
+  width: 4rem;
+  height: 4rem;
+}

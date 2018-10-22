@@ -2,7 +2,8 @@ import { CommonModule } from "@angular/common"
 import { NgModule } from "@angular/core"
 import { RouterModule } from "@angular/router"
 
-import { PageComponent } from "./page.component"
+import { PairingComponent } from "./pairing.component"
+import { QrcodeComponent } from "./qrcode/qrcode.component"
 
 @NgModule({
   imports: [
@@ -10,12 +11,13 @@ import { PageComponent } from "./page.component"
     RouterModule.forChild([
       {
         path: "",
-        component: PageComponent,
+        component: PairingComponent,
       },
     ]),
   ],
   declarations: [
-    PageComponent,
+    PairingComponent,
+    QrcodeComponent,
   ],
 })
 export class PairingModule { }
