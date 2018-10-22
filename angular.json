@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "packageManager": "yarn"
+  },
   "defaultProject": "client",
   "projects": {
     "client": {
@@ -90,6 +93,12 @@
         }
       },
       "sourceRoot": "client/"
+    }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "changeDetection": "OnPush",
+      "spec": false
     }
   },
   "version": 1
