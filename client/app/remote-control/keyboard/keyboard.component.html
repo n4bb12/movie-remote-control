@@ -8,7 +8,7 @@
     autocomplete="off"
     autocapitalize="off"
     (keydown)="handleKeydown($event)"
-    (input)="handleInput($event); input.value = ''"
+    (input)="handleKeydown($event); input.value = ''"
   />
   <label class="recent">
     {{ recentKeydown | async }}
