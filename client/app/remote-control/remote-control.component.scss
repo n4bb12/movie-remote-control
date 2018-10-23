@@ -9,9 +9,18 @@
   margin: 0 auto;
   background: #333333;
   color: #aaaaaa;
+  user-select: none;
 }
 
-div {
+app-mousepad {
   flex: 1 1 0;
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+app-controls {
+  margin-top: 1rem;
+}
+
+app-volume {
+  margin-top: .5rem;
 }

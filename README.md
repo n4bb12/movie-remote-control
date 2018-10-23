@@ -1,4 +1,4 @@
-<img src="docs/remote-control.png" height="400" align="right">
+<img src="docs/remote-control.png" height="450" align="right">
 
 <h1 align="center">
   <img alt="Logo" src="https://image.flaticon.com/icons/svg/421/421829.svg" height="48">
