@@ -10,17 +10,3 @@
   background: #3e3d42;
   color: #acabb1;
 }
-
-::ng-deep {
-  img,
-  svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50%;
-    height: 50%;
-    max-width: 3rem;
-    max-height: 3rem;
-    transform: translate(-50%, -50%);
-  }
-}

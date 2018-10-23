@@ -1,0 +1,15 @@
+:host {
+  display: inline-block;
+}
+
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  max-width: 3rem;
+  max-height: 3rem;
+  transform: translate(-50%, -50%);
+  fill: currentColor;
+}

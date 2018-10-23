@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core"
 import { RouterModule } from "@angular/router"
 
 import { ControlsComponent } from "./controls/controls.component"
+import { IconComponent } from "./icon/icon.component"
 import { KeyboardComponent } from "./keyboard/keyboard.component"
 import { MousepadComponent } from "./mousepad/mousepad.component"
 import { RemoteControlComponent } from "./remote-control.component"
@@ -24,6 +25,7 @@ import { VolumeComponent } from "./volume/volume.component"
     ControlsComponent,
     VolumeComponent,
     KeyboardComponent,
+    IconComponent,
   ],
 })
 export class RemoteControlModule { }
