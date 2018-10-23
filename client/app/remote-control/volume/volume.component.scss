@@ -1,20 +1,27 @@
 .volume {
   position: relative;
-  background: #57565c;
+  box-shadow: inset 0 1px 1px 1px #222222;
+  background: #555555;
   height: 1rem;
   border-radius: .5rem;
   margin: 2rem 0 1rem;
+
+  .slider {
+    position: relative;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   .knob {
     position: relative;
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
-    background: #acabb1;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    cursor: pointer;
   }
 }

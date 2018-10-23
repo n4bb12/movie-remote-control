@@ -4,9 +4,14 @@
   align-items: stretch;
   width: 100%;
   height: 100%;
-  max-width: 25rem;
+  overflow-x: hidden;
   padding: 1rem;
   margin: 0 auto;
-  background: #3e3d42;
-  color: #acabb1;
+  background: #333333;
+  color: #aaaaaa;
+}
+
+div {
+  flex: 1 1 0;
+  padding-bottom: 1rem;
 }

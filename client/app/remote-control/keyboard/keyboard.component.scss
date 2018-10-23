@@ -1,19 +1,7 @@
 :host {
+  display: block;
   position: relative;
-  margin-top: 1rem;
   user-select: none;
-
-  .input {
-    display: block;
-    padding: 1rem;
-    min-width: 0;
-    width: 100%;
-    border: 0;
-    border-radius: .5rem;
-    background: #57565c;
-    color: #acabb1;
-    font-family: monospace;
-  }
 
   .recent {
     position: absolute;
@@ -25,5 +13,6 @@
     align-items: center;
     justify-content: center;
     pointer-events: none;
+    font-size: 1.25rem;
   }
 }

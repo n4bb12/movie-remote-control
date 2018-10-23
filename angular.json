@@ -46,6 +46,9 @@
             "outputPath": "dist/client",
             "polyfills": "client/polyfills.ts",
             "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": ["client"]
+            },
             "styles": ["client/styles.scss"],
             "tsConfig": "client/tsconfig.json"
           }
