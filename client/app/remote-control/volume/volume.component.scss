@@ -4,28 +4,40 @@
 
 .volume {
   position: relative;
-  box-shadow: inset 0 1px 1px 1px #222222;
-  background: #555555;
-  height: 1rem;
-  border-radius: .5rem;
-  margin: 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  height: 3rem;
 
   .slider {
-    position: relative;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    box-shadow: inset 0 1px 1px 1px #222222;
+    border-radius: 1rem;
+    transition: .2s ease-out;
   }
 
-  .knob {
-    position: relative;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+  .coordinate-system {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .knob {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    user-select: none;
+  }
+
+  &.--active {
+    .slider,
+    .knob {
+      transition: none;
+    }
   }
 }

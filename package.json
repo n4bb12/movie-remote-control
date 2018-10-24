@@ -43,6 +43,7 @@
     "core-js": "^2.5.4",
     "express": "^4.16.4",
     "express-history-api-fallback": "^2.2.1",
+    "hammerjs": "^2.0.8",
     "lodash": "^4.17.11",
     "normalize-scss": "^7.0.1",
     "qrcode": "^1.3.0",

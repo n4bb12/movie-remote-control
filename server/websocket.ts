@@ -31,6 +31,16 @@ export function acceptWebsocketConnections(server: Server) {
           }
           break
 
+        case "VOLUME":
+          if (data === "-1") {
+            tap("ArrowDown")
+          } else if (data === "1") {
+            tap("ArrowUp")
+          } else {
+            console.log("unknown VOLUME:", data)
+          }
+          break
+
         default:
           console.log("unhandled command:", command)
           break

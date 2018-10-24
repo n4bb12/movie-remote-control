@@ -40,12 +40,11 @@ button {
   border-radius: 50%;
   border-color: #dddddd #aaaaaa #aaaaaa #dddddd;
   background: #aaaaaa;
+  transition: .2s ease-out;
   cursor: pointer;
-  transition: .1s ease-out;
 
-  &:hover,
-  &:focus,
   &:active {
-    border-style: outset;
+    border-style: inset;
+    border-color: #dddddd #aaaaaa #aaaaaa #dddddd;
   }
 }

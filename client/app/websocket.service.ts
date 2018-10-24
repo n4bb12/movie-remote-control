@@ -39,7 +39,12 @@ export class WebsocketService {
     this.send(message)
   }
 
-  send(message: string) {
+  changeVolume(sign: number): void {
+    const message = ["VOLUME", sign].join("|")
+    this.send(message)
+  }
+
+  send(message: string): void {
     this.ws.send(message)
     console.log("client sent:", message)
   }

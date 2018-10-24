@@ -1,8 +1,16 @@
-<div class="volume">
-  <button
-    type="button"
-    class="knob"
-  >
-    <app-icon name="speaker-5"></app-icon>
-  </button>
+<div
+  class="volume"
+  [class.--active]="isPointerDown"
+>
+  <div class="slider" [style.background]="sliderBg">
+    <div class="coordinate-system">
+      <button
+        type="button"
+        class="knob"
+        (pan)="handlePan($event)"
+      >
+        <app-icon name="speaker-5"></app-icon>
+      </button>
+    </div>
+  </div>
 </div>

@@ -1,6 +1,8 @@
 :host {
   display: inline-block;
   min-height: 0;
+  pointer-events: none;
+  user-select: none;
 }
 
 svg {
