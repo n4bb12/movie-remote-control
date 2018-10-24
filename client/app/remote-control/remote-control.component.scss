@@ -13,14 +13,20 @@
 }
 
 app-mousepad {
-  flex: 1 1 0;
+  flex: 1;
   margin-bottom: 1rem;
 }
 
+app-keyboard {
+  flex: none;
+  margin-bottom: .5rem;
+}
+
 app-controls {
-  margin-top: 1rem;
+  flex: none;
+  margin-bottom: .5rem;
 }
 
 app-volume {
-  margin-top: .5rem;
+  flex: none;
 }

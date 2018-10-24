@@ -16,4 +16,16 @@ export class ControlsComponent {
     this.ws.pressKey(key)
   }
 
+  rewind(): void {
+    this.ws.rewind()
+  }
+
+  pause(): void {
+    this.ws.pause()
+  }
+
+  fastForward(): void {
+    this.ws.fastForward()
+  }
+
 }

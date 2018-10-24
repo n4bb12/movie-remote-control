@@ -16,7 +16,6 @@ export function acceptWebsocketConnections(server: Server) {
       console.log("server received:", message)
 
       const [command, data] = message.split("|")
-      const { key } = JSON.parse(data || "{}")
 
       switch (command) {
         case "PING":
@@ -24,11 +23,25 @@ export function acceptWebsocketConnections(server: Server) {
           break
 
         case "KEY":
-          if (key && tap(key)) {
+          if (data && tap(data)) {
             send("KEY pressed: " + data)
           } else {
             send("KEY not mapped: " + data)
           }
+          break
+
+        case "REWIND":
+          tap("ArrowLeft")
+          tap("Enter") // Amazon Prime
+          break
+
+        case "PAUSE":
+          tap(" ")
+          break
+
+        case "FAST_FORWARD":
+          tap("ArrowRight")
+          tap("Enter") // Amazon Prime
           break
 
         case "VOLUME":

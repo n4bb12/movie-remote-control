@@ -33,10 +33,21 @@ export class WebsocketService {
     }
   }
 
-  pressKey(key: string) {
-    const data = JSON.stringify({ key })
-    const message = ["KEY", data].join("|")
+  pressKey(key: string): void {
+    const message = ["KEY", key].join("|")
     this.send(message)
+  }
+
+  rewind(): void {
+    this.send("REWIND")
+  }
+
+  pause(): void {
+    this.send("PAUSE")
+  }
+
+  fastForward(): void {
+    this.send("FAST_FORWARD")
   }
 
   changeVolume(sign: number): void {

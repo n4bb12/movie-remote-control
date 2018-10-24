@@ -1,7 +1,7 @@
 <button
   type="button"
   class="wind"
-  (click)="pressKey('ArrowLeft'); pressKey('Enter')"
+  (click)="rewind()"
 >
   <app-icon name="rewind"></app-icon>
 </button>
@@ -9,7 +9,7 @@
 <button
   type="button"
   class="pause"
-  (click)="pressKey(' ')"
+  (click)="pause()"
 >
   <app-icon name="pause"></app-icon>
 </button>
@@ -17,7 +17,7 @@
 <button
   type="button"
   class="wind"
-  (click)="pressKey('ArrowRight'); pressKey('Enter')"
+  (click)="fastForward()"
 >
   <app-icon name="fast-forward"></app-icon>
 </button>
