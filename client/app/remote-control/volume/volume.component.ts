@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core"
+import { ChangeDetectionStrategy, Component, OnDestroy } from "@angular/core"
 
 import { WebsocketService } from "client/app/websocket.service"
 
@@ -8,12 +8,17 @@ import { WebsocketService } from "client/app/websocket.service"
   styleUrls: ["./volume.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class VolumeComponent {
+export class VolumeComponent implements OnDestroy {
 
   isPointerDown = false
   sliderBg = "hsl(0, 0%, 33%)"
+  private sendInterval: NodeJS.Timeout
 
   constructor(private ws: WebsocketService) { }
+
+  ngOnDestroy() {
+    clearInterval(this.sendInterval)
+  }
 
   handlePan(e) {
     const knobEl = e.target as HTMLButtonElement
@@ -33,7 +38,12 @@ export class VolumeComponent {
     this.sliderBg = `hsl(${hue}, ${saturation}%, ${lightness}%)`
 
     if (ratio > 0.5) {
-      this.ws.changeVolume(Math.sign(delta))
+      if (!this.sendInterval) {
+        this.sendInterval = setInterval(() => this.ws.changeVolume(Math.sign(delta)), 250)
+      }
+    } else {
+      clearInterval(this.sendInterval)
+      delete this.sendInterval
     }
   }
 
