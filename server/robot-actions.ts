@@ -22,8 +22,8 @@ export function moveMouse(movement: Movement): void {
     origin = robot.getMousePos()
   }
 
-  const x = origin.x + movement.deltaX
-  const y = origin.y + movement.deltaY
+  const x = origin.x + movement.deltaX * 2
+  const y = origin.y + movement.deltaY * 2
   robot.moveMouse(x, y)
 
   if (movement.isFinal) {
