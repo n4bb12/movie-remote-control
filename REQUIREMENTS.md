@@ -12,3 +12,4 @@ Things I would like to be able to do with this app:
 🔳️ start server as global node binary
 🔳️ start server as electron app
 ✅ mobile homescreen icon
+🔳️ mobile install prompt (https://developers.google.com/web/fundamentals/app-install-banners/)

@@ -1,5 +1,3 @@
-<img src="client/assets/screenshots/remote-control.png" height="450" align="right">
-
 <h1 align="center">
   <img alt="Logo" src="https://image.flaticon.com/icons/svg/421/421829.svg" height="48">
   Movie Remote Control
@@ -29,9 +27,74 @@
 
 <hr>
 
-**Early development, please don't use.**
+<p align="center">
+⚠️ Early development, please don't use. ⚠️
+</p>
 
 <hr>
+
+<img src="client/assets/screenshots/remote-control.png" height="450">
+
+## Remote Control Features
+
+| What           | Effect                          | Notes                                                                                                                              |
+| -------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| 👈 Tap         | <i>Click</i>                    |                                                                                                                                    |
+| 💨 Pan         | <i>Mousemove</i>                | To accomodate for larger movie screens the movement distance is doubled.                                                           |
+| #️⃣ Keyboard   | <i>Keypress</i>                 | Tap on the input field to open the keyboard, type anything.                                                                        |
+| ⏪ Rewind       | <kbd>←</kbd> + <kbd>Enter</kbd> | Some video players require pressing enter to confirm.                                                                              |
+| 🆗 Pause       | <kbd>Spacebar</kbd>             |                                                                                                                                    |
+| ⏩ Fast-forward | <kbd>→</kbd> + <kbd>Enter</kbd> |                                                                                                                                    |
+| 🔉 Volume      | <kbd>↑</kbd> \| <kbd>↓</kbd>    | Drag left or right. Volume events are throttled, so you can keep the knob attached to your finger, until the volume is satisfying. |
+
+## Usage
+
+#### Install
+
+With yarn
+
+```sh
+$ yarn global add movie-remote-control
+```
+
+With npm
+
+```sh
+$ npm install movie-remote-control
+```
+
+This adds the shell the commands `mrc` and `movie-remote-control`.
+
+#### Start Server
+
+Start the server with one of the following commands.
+
+```sh
+$ mrc
+
+# fallback alternative
+$ movie-remote-control
+```
+
+#### Customize Port
+
+The default port is `3000`. Specify a custom port via the `--port` flag:
+
+```sh
+$ mrc --port 4000
+```
+
+The pairing web page is automatically opened.
+
+#### Pair Your Device
+
+Either scan the displayed bar code or manually open the highlighted URL on your mobile phone.
+
+<img src="client/assets/screenshots/pairing.png" height="360">
+
+#### Add to Homescreen
+
+
 
 #
 
