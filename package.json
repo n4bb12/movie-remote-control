@@ -16,7 +16,8 @@
   "license": "ISC",
   "author": "Abraham Schilling",
   "bin": {
-    "server": "dist/server"
+    "mrc": "dist/server",
+    "movie-remote-control": "dist/server"
   },
   "scripts": {
     "build": "rimraf dist && run-p build:*",
