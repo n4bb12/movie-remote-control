@@ -1,11 +1,15 @@
 {
+  "$schema": "http://json.schemastore.org/web-manifest",
+  "lang": "en",
   "name": "Movie Remote Control",
   "short_name": "Remote",
+  "description": "Watch movies using your phone as a remote control",
+  "categories": ["Entertainment"],
   "theme_color": "#FF5023",
   "background_color": "#333333",
   "display": "fullscreen",
   "orientation": "portrait",
-  "Scope": "/",
+  "scope": "/",
   "start_url": "/remote-control",
   "icons": [
     {
@@ -49,5 +53,17 @@
       "type": "image/png"
     }
   ],
-  "splash_pages": null
+  "screenshots": [
+    {
+      "platform": "play",
+      "src": "/assets/screenshots/remote-control.png",
+      "sizes": "1370x2534",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/screenshots/pairing.png",
+      "sizes": "640x360",
+      "type": "image/png"
+    }
+  ]
 }

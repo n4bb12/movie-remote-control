@@ -2,6 +2,7 @@
   "name": "movie-client",
   "version": "0.0.0",
   "private": true,
+  "description": "Watch movies using your phone as a remote control",
   "keywords": [
     "control",
     "movie",
@@ -19,16 +20,16 @@
   },
   "scripts": {
     "build": "rimraf dist && run-p build:*",
-    "build:icons": "svg-sprite --symbol --symbol-example --dest client/assets --symbol-dest . --symbol-sprite icon-sprite.svg --symbol-example-dest icon-sprite.html \"client/assets/icons/*.svg\"",
     "build:client": "ng build client -c production",
+    "build:icons": "svg-sprite --symbol --symbol-example --dest client/assets --symbol-dest . --symbol-sprite icon-sprite.svg --symbol-example-dest icon-sprite.html \"client/assets/icons/*.svg\"",
     "build:server": "tsc --project server/tsconfig.json",
     "dev": "run-p dev:*",
     "dev:client": "ng serve client",
     "dev:server": "nodemon --watch server --ext ts --exec yarn ts-node --project server/tsconfig.json server",
-    "prod": "yarn build && cross-env PORT=3000 node dist/server",
     "lint": "run-p lint:*",
     "lint:client": "ng lint",
-    "lint:server": "tslint --project server"
+    "lint:server": "tslint --project server",
+    "prod": "yarn build && cross-env PORT=3000 node dist/server"
   },
   "dependencies": {
     "@angular/animations": "~7.0.0",

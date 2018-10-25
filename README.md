@@ -1,4 +1,4 @@
-<img src="docs/remote-control.png" height="450" align="right">
+<img src="client/assets/screenshots/remote-control.png" height="450" align="right">
 
 <h1 align="center">
   <img alt="Logo" src="https://image.flaticon.com/icons/svg/421/421829.svg" height="48">
@@ -13,9 +13,9 @@
   <a href="https://circleci.com/gh/n4bb12/workflows/movie-remote-control">
     <img alt="CircleCI" src="https://flat.badgen.net/circleci/github/n4bb12/movie-remote-control?icon=circleci">
   </a>
-  <!-- <a href="https://david-dm.org/n4bb12/movie-remote-control">
+  <a href="https://david-dm.org/n4bb12/movie-remote-control">
     <img alt="Dependencies" src="https://flat.badgen.net/david/dep/n4bb12/movie-remote-control?icon=npm">
-  </a> -->
+  </a>
   <a href="https://raw.githubusercontent.com/n4bb12/movie-remote-control/master/LICENSE">
     <img alt="License" src="https://flat.badgen.net/github/license/n4bb12/movie-remote-control?icon=github">
   </a>
@@ -29,11 +29,6 @@
     <img alt="Issues" src="https://flat.badgen.net/badge/github/create issue/pink?icon=github">
   </a>
 </p>
-
-<!-- <p align="center">
-  <img src="docs/remote-control.png" height="400">
-  <img src="docs/pairing.png" width="400">
-</p> -->
 
 <hr>
 
