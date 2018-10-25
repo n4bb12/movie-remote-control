@@ -1,12 +1,14 @@
 import express from "express"
 import history from "express-history-api-fallback"
 import http from "http"
+import opn from "opn"
 import path from "path"
 
 import { acceptWebsocketConnections } from "./websocket"
 
 const port = process.env.PORT || 3200
 const webroot = path.join(__dirname, "..", "client")
+const url = `http://localhost:${port}`
 
 const app = express()
 const server = new http.Server(app)
@@ -17,5 +19,6 @@ app.use(express.static(webroot))
 app.use(history("index.html", { root: webroot }))
 
 server.listen(port, () => {
-  console.log(`Server is listening on http://localhost:${port}`)
+  console.log(`Server is listening on ${url}`)
+  opn(url)
 })
