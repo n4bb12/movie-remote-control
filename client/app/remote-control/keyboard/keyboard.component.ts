@@ -20,7 +20,7 @@ export class KeyboardComponent {
     e.preventDefault()
     const key = e.key || e.data
     this.setRecentKeydown(key)
-    this.ws.pressKey(key)
+    this.ws.tapKey(key)
   }
 
   private setRecentKeydown(key: string): void {

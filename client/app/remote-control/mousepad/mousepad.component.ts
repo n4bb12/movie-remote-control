@@ -22,7 +22,7 @@ export class MousepadComponent {
   }
 
   handleTap(e: KeyboardEvent) {
-    this.ws.click()
+    this.ws.clickMouse()
     this.navigator.vibrate()
   }
 

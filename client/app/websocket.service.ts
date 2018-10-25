@@ -33,11 +33,11 @@ export class WebsocketService {
     }
   }
 
-  click() {
+  clickMouse() {
     this.send("CLICK")
   }
 
-  pressKey(key: string): void {
+  tapKey(key: string): void {
     const message = ["KEY", key].join("|")
     this.send(message)
   }
