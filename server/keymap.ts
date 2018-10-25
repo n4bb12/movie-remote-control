@@ -1,5 +1,5 @@
 import { Key } from "w3c-keys"
-import { RobotKey } from "./types/robot-key-name"
+import { RobotKey } from "./robot-key-name"
 
 export function getRobotJSKey(key: string): string {
   // RobotJS docs: "The names of the letter and number keys
