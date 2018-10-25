@@ -39,11 +39,22 @@ export class VolumeComponent implements OnDestroy {
 
     if (ratio > 0.5) {
       if (!this.sendInterval) {
-        this.sendInterval = setInterval(() => this.ws.changeVolume(Math.sign(delta)), 250)
+        this.sendInterval = setInterval(() => this.changeVolume(delta), 250)
       }
     } else {
       clearInterval(this.sendInterval)
       delete this.sendInterval
+    }
+  }
+
+  private changeVolume = (delta: number) => {
+    this.ws.changeVolume(Math.sign(delta))
+    this.vibrate()
+  }
+
+  private vibrate() {
+    if ("vibrate" in window.navigator) {
+      window.navigator.vibrate(50)
     }
   }
 

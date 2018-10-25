@@ -12,20 +12,25 @@ export class ControlsComponent {
 
   constructor(private ws: WebsocketService) { }
 
-  pressKey(key: string) {
-    this.ws.pressKey(key)
-  }
-
   rewind(): void {
     this.ws.rewind()
+    this.vibrate()
   }
 
   pause(): void {
     this.ws.pause()
+    this.vibrate()
   }
 
   fastForward(): void {
     this.ws.fastForward()
+    this.vibrate()
+  }
+
+  private vibrate() {
+    if ("vibrate" in window.navigator) {
+      window.navigator.vibrate(50)
+    }
   }
 
 }
