@@ -38,40 +38,16 @@ jobs:
           root: .
           paths: dist
 
-  build_docker:
-    docker:
-      - image: circleci/node:10
-    steps:
-      - attach_workspace:
-          at: .
-      - setup_remote_docker:
-          docker_layer_caching: true
-      - run:
-          name: Build docker image
-          command: |
-            name=$(node -p "require('./package.json').name")
-            version=$(node -p "require('./package.json').version")
-            image=$DOCKER_USER/$name:$version-$CIRCLE_BUILD_NUM
-            docker build -t $image .
-            # docker tag $image $DOCKER_USER/$name:latest
-            # docker login -u $DOCKER_USER -p "$DOCKER_PASS"
-            # docker push $DOCKER_USER/$name
-
 workflows:
   version: 2
   default:
     jobs:
       - install
+
       - lint:
           requires:
             - install
+
       - build_app:
           requires:
             - install
-      - build_docker:
-          requires:
-            - build_app
-          # filters:
-          #   branches:
-          #     only:
-          #       - master

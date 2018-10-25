@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "rimraf dist && run-p build:*",
-    "build:client": "ng build client -c production",
+    "build:client": "ng build client -c production --no-progress",
     "build:icons": "svg-sprite --symbol --symbol-example --dest client/assets --symbol-dest . --symbol-sprite icon-sprite.svg --symbol-example-dest icon-sprite.html \"client/assets/icons/*.svg\"",
     "build:server": "tsc --project server/tsconfig.json",
     "dev": "run-p dev:*",

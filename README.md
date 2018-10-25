@@ -19,9 +19,6 @@
   <a href="https://raw.githubusercontent.com/n4bb12/movie-remote-control/master/LICENSE">
     <img alt="License" src="https://flat.badgen.net/github/license/n4bb12/movie-remote-control?icon=github">
   </a>
-  <!-- <a href="https://hub.docker.com/r/n4bb1/movie-remote-control">
-    <img alt="Docker" src="https://flat.badgen.net/badge/docker/n4bb1%2Fmovie-remote-control/22b8eb?icon=docker">
-  </a> -->
   <!-- <a href="https://app.netlify.com/sites/movie-remote-control/deploys">
     <img alt="Netlify" src="https://img.shields.io/badge/netlify-movie-remote-control.netlify.com-00ad9f.svg?style=flat-square&logo=netlify">
   </a> -->
@@ -35,35 +32,6 @@
 **Early development, please don't use.**
 
 <hr>
-
-<!-- ## Run with Docker
-
-Quickly test it out:
-
-```text
-docker run \
-  --name movie-remote-control \
-  --publish 8080:80 \
-  --interactive \
-  --tty \
-  --rm \
-  n4bb1/movie-remote-control:0.0.0-1
-```
-
-Autostart it:
-
-```text
-docker run \
-  --name movie-remote-control \
-  --publish 8080:80 \
-  --interactive \
-  --tty \
-  --detach \
-  --restart unless-stopped \
-  n4bb1/movie-remote-control:0.0.0-1
-``` -->
-
-<!-- ## Run with Node.js -->
 
 #
 

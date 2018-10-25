@@ -11,5 +11,4 @@ Things I would like to be able to do with this app:
 ✅ connect with qr-code
 🔳️ start server as global node binary
 🔳️ start server as electron app
-🔳️ start server as docker container (if this is at all possible)
 ✅ mobile homescreen icon
