@@ -1,9 +1,8 @@
 <button
   type="button"
   class="mousepad"
-  (pointerdown)="handlePointerdown($event)"
-  (pointermove)="handlePointermove($event)"
-  (pointerup)="handlePointerup($event)"
+  (pan)="handlePan($event)"
+  (tap)="handleTap($event)"
 >
   <app-icon name="fingerprint"></app-icon>
 </button>

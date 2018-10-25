@@ -8,22 +8,12 @@ import { ChangeDetectionStrategy, Component } from "@angular/core"
 })
 export class MousepadComponent {
 
-  private isPointerDown = false
-
-  handlePointerdown(e: KeyboardEvent) {
+  handlePan(e: KeyboardEvent) {
     console.log(e)
-    this.isPointerDown = true
   }
 
-  handlePointermove(e: KeyboardEvent) {
-    if (this.isPointerDown) {
-      console.log(e)
-    }
-  }
-
-  handlePointerup(e: KeyboardEvent) {
+  handleTap(e: KeyboardEvent) {
     console.log(e)
-    this.isPointerDown = false
   }
 
 }
