@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core"
 
+import { NavigatorService } from "client/app/remote-control/navigator.service"
 import { WebsocketService } from "client/app/websocket.service"
 
 @Component({
@@ -10,22 +11,19 @@ import { WebsocketService } from "client/app/websocket.service"
 })
 export class MousepadComponent {
 
-  constructor(private ws: WebsocketService) { }
+  constructor(
+    private navigator: NavigatorService,
+    private ws: WebsocketService,
+  ) { }
 
   handlePan(e: KeyboardEvent) {
-
+    // TODO
     console.log(e)
   }
 
   handleTap(e: KeyboardEvent) {
     this.ws.click()
-    this.vibrate()
-  }
-
-  private vibrate() {
-    if ("vibrate" in window.navigator) {
-      window.navigator.vibrate(50)
-    }
+    this.navigator.vibrate()
   }
 
 }

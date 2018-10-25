@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnDestroy } from "@angular/core"
 
+import { NavigatorService } from "client/app/remote-control/navigator.service"
 import { WebsocketService } from "client/app/websocket.service"
 
 @Component({
@@ -14,7 +15,10 @@ export class VolumeComponent implements OnDestroy {
   sliderBg = "hsl(0, 0%, 33%)"
   private sendInterval: NodeJS.Timeout
 
-  constructor(private ws: WebsocketService) { }
+  constructor(
+    private navigator: NavigatorService,
+    private ws: WebsocketService,
+  ) { }
 
   ngOnDestroy() {
     clearInterval(this.sendInterval)
@@ -49,13 +53,7 @@ export class VolumeComponent implements OnDestroy {
 
   private changeVolume = (delta: number) => {
     this.ws.changeVolume(Math.sign(delta))
-    this.vibrate()
-  }
-
-  private vibrate() {
-    if ("vibrate" in window.navigator) {
-      window.navigator.vibrate(50)
-    }
+    this.navigator.vibrate()
   }
 
 }

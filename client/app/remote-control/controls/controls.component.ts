@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core"
 
+import { NavigatorService } from "client/app/remote-control/navigator.service"
 import { WebsocketService } from "client/app/websocket.service"
 
 @Component({
@@ -10,27 +11,24 @@ import { WebsocketService } from "client/app/websocket.service"
 })
 export class ControlsComponent {
 
-  constructor(private ws: WebsocketService) { }
+  constructor(
+    private navigator: NavigatorService,
+    private ws: WebsocketService,
+  ) { }
 
   rewind(): void {
     this.ws.rewind()
-    this.vibrate()
+    this.navigator.vibrate()
   }
 
   pause(): void {
     this.ws.pause()
-    this.vibrate()
+    this.navigator.vibrate()
   }
 
   fastForward(): void {
     this.ws.fastForward()
-    this.vibrate()
-  }
-
-  private vibrate() {
-    if ("vibrate" in window.navigator) {
-      window.navigator.vibrate(50)
-    }
+    this.navigator.vibrate()
   }
 
 }
