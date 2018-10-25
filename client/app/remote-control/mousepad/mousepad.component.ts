@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core"
 
+import { WebsocketService } from "client/app/websocket.service"
+
 @Component({
   selector: "app-mousepad",
   templateUrl: "./mousepad.component.html",
@@ -8,12 +10,22 @@ import { ChangeDetectionStrategy, Component } from "@angular/core"
 })
 export class MousepadComponent {
 
+  constructor(private ws: WebsocketService) { }
+
   handlePan(e: KeyboardEvent) {
+
     console.log(e)
   }
 
   handleTap(e: KeyboardEvent) {
-    console.log(e)
+    this.ws.click()
+    this.vibrate()
+  }
+
+  private vibrate() {
+    if ("vibrate" in window.navigator) {
+      window.navigator.vibrate(50)
+    }
   }
 
 }

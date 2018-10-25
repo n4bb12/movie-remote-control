@@ -10,3 +10,7 @@ export function tap(key: string): boolean {
   }
   return !!robotKey
 }
+
+export function click(): void {
+  robot.mouseClick("left")
+}

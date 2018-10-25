@@ -33,6 +33,10 @@ export class WebsocketService {
     }
   }
 
+  click() {
+    this.send("CLICK")
+  }
+
   pressKey(key: string): void {
     const message = ["KEY", key].join("|")
     this.send(message)
@@ -55,7 +59,7 @@ export class WebsocketService {
     this.send(message)
   }
 
-  send(message: string): void {
+  private send(message: string): void {
     this.ws.send(message)
     console.log("client sent:", message)
   }

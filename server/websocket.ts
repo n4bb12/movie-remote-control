@@ -1,7 +1,7 @@
 import { Server } from "http"
 import WebSocket from "ws"
 
-import { tap } from "./robot"
+import { click, tap } from "./robot"
 
 export function acceptWebsocketConnections(server: Server) {
   const wss = new WebSocket.Server({ server })
@@ -22,10 +22,12 @@ export function acceptWebsocketConnections(server: Server) {
           send("PONG")
           break
 
+        case "CLICK":
+          click()
+          break
+
         case "KEY":
-          if (data && tap(data)) {
-            send("KEY pressed: " + data)
-          } else {
+          if (!data || !tap(data)) {
             send("KEY not mapped: " + data)
           }
           break
