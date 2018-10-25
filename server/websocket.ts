@@ -1,7 +1,8 @@
 import { Server } from "http"
 import WebSocket from "ws"
 
-import { clickMouse, tapKey } from "./robot-actions"
+import { clickMouse, moveMouse, tapKey } from "./robot-actions"
+import { Movement } from "./websocket-messages"
 
 let ws: WebSocket
 
@@ -21,6 +22,11 @@ function handleMessage(message: string): void {
   switch (command) {
     case "PING":
       send("PONG")
+      break
+
+    case "MOVE":
+      const movement: Movement = JSON.parse(data)
+      moveMouse(movement)
       break
 
     case "CLICK":

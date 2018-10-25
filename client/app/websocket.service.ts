@@ -33,6 +33,12 @@ export class WebsocketService {
     }
   }
 
+  moveMouse(deltaX: number, deltaY: number, isFinal: boolean) {
+    const movement = JSON.stringify({ deltaX, deltaY, isFinal })
+    const message = ["MOVE", movement].join("|")
+    this.send(message)
+  }
+
   clickMouse() {
     this.send("CLICK")
   }

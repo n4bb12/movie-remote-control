@@ -16,9 +16,8 @@ export class MousepadComponent {
     private ws: WebsocketService,
   ) { }
 
-  handlePan(e: KeyboardEvent) {
-    // TODO
-    console.log(e)
+  handlePan(e) {
+    this.ws.moveMouse(e.deltaX, e.deltaY, e.isFinal)
   }
 
   handleTap(e: KeyboardEvent) {
