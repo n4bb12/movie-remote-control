@@ -2,7 +2,7 @@
   "name": "Movie Remote Control",
   "short_name": "Remote",
   "theme_color": "#FF5023",
-  "background_color": "#3E3D42",
+  "background_color": "#333333",
   "display": "fullscreen",
   "orientation": "portrait",
   "Scope": "/",
