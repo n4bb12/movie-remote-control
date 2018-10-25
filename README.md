@@ -35,7 +35,7 @@
 
 <img src="client/assets/screenshots/remote-control.png" height="450">
 
-## Remote Control Features
+## Features
 
 | What           | Effect                          | Notes                                                                                                                              |
 | -------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -72,16 +72,22 @@ Start the server with one of the following commands.
 ```sh
 $ mrc
 
-# fallback alternative
+# or
+
 $ movie-remote-control
 ```
 
 #### Customize Port
 
-The default port is `3000`. Specify a custom port via the `--port` flag:
+The default port is `3000`.
+Specify a custom port via the `--port` flag or the `PORT` environment variable:
 
 ```sh
 $ mrc --port 4000
+
+# or
+
+$ PORT=4000 mrc
 ```
 
 The pairing web page is automatically opened.

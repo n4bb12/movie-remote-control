@@ -9,7 +9,7 @@ Things I would like to be able to do with this app:
 ✅ mouse (click different movie / switch focus)
 ✅ keyboard input (search movie)
 ✅ connect with qr-code
-🔳️ start server as global node binary
+✅ start server as global node binary
 🔳️ start server as electron app
 ✅ mobile homescreen icon
 🔳️ mobile install prompt (https://developers.google.com/web/fundamentals/app-install-banners/)

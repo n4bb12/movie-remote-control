@@ -2943,6 +2943,11 @@ get-value@^2.0.3, get-value@^2.0.6:
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
+getopts@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/getopts/-/getopts-2.2.2.tgz#a6ada98961c3d1f099e88f0698fabe716f8a253c"
+  integrity sha512-qX9XmOFViBolzBfWkBKOP/HOO8VSgy6reZMVWo/QvCmwXJLZU5idp4W+L70CM8SPBRBwgrCyU65IKKr40zgizw==
+
 getpass@^0.1.1:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/getpass/-/getpass-0.1.7.tgz#5eff8e3e684d569ae4cb2b1282604e8ba62149fa"
