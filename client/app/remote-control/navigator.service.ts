@@ -7,7 +7,7 @@ export class NavigatorService {
 
   vibrate() {
     if ("vibrate" in window.navigator) {
-      window.navigator.vibrate(50)
+      window.navigator.vibrate(25)
     }
   }
 
