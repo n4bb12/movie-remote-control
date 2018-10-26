@@ -43,6 +43,7 @@ export class VolumeComponent implements OnDestroy {
 
     if (ratio > 0.5) {
       if (!this.sendInterval) {
+        this.changeVolume(delta)
         this.sendInterval = setInterval(() => this.changeVolume(delta), 250)
       }
     } else {
