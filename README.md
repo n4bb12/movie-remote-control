@@ -37,15 +37,15 @@
 
 ## Features
 
-| What           | Effect                          | Notes                                                                                                                              |
-| -------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| 👈 Tap         | <i>Click</i>                    |                                                                                                                                    |
-| 💨 Pan         | <i>Mousemove</i>                | To accomodate for larger movie screens the movement distance is doubled.                                                           |
-| #️⃣ Keyboard   | <i>Keypress</i>                 | Tap on the input field to open the keyboard, type anything.                                                                        |
-| ⏪ Rewind       | <kbd>←</kbd> + <kbd>Enter</kbd> | Some video players require pressing enter to confirm.                                                                              |
-| 🆗 Pause       | <kbd>Spacebar</kbd>             |                                                                                                                                    |
-| ⏩ Fast-forward | <kbd>→</kbd> + <kbd>Enter</kbd> |                                                                                                                                    |
-| 🔉 Volume      | <kbd>↑</kbd> \| <kbd>↓</kbd>    | Drag left or right. Volume events are throttled, so you can keep the knob attached to your finger, until the volume is satisfying. |
+| What                | Effect                          | Notes                                                                                                                              |
+| ------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| 👈&nbsp;Tap         | <i>Click</i>                    |                                                                                                                                    |
+| 💨&nbsp;Pan         | <i>Mousemove</i>                | To accomodate for larger movie screens the movement distance is doubled.                                                           |
+| #️⃣&nbsp;Keyboard   | <i>Keypress</i>                 | Tap on the input field to open the keyboard, type anything.                                                                        |
+| ⏪&nbsp;Rewind       | <kbd>←</kbd> + <kbd>Enter</kbd> | Some video players require pressing enter to confirm.                                                                              |
+| 🆗&nbsp;Pause       | <kbd>Spacebar</kbd>             |                                                                                                                                    |
+| ⏩&nbsp;Fast&#8209;forward | <kbd>→</kbd> + <kbd>Enter</kbd> |                                                                                                                                    |
+| 🔉&nbsp;Volume      | <kbd>↑</kbd> \| <kbd>↓</kbd>    | Drag left or right. Volume events are throttled, so you can keep the knob attached to your finger, until the volume is satisfying. |
 
 ## Usage
 
@@ -96,7 +96,9 @@ The pairing web page is automatically opened.
 
 Either scan the displayed bar code or manually open the highlighted URL on your mobile phone.
 
-<img src="client/assets/screenshots/pairing.png" height="360">
+<p align="center">
+  <img src="client/assets/screenshots/pairing.png">
+</p>
 
 #### Add to Homescreen
 
