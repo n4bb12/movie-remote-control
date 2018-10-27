@@ -51,46 +51,19 @@
 
 #### Install
 
-With yarn
-
 ```sh
-$ yarn global add movie-remote-control
+$ npm install --global movie-remote-control
 ```
 
-With npm
-
-```sh
-$ npm install movie-remote-control
-```
-
-This adds the shell the commands `mrc` and `movie-remote-control`.
+This adds the shell the commands `mrc` or `movie-remote-control`.
 
 #### Start Server
 
-Start the server with one of the following commands.
+Start the server and open the pairing page:
 
 ```sh
-$ mrc
-
-# or
-
-$ movie-remote-control
+$ movie-remote-control --port 3000 --open
 ```
-
-#### Customize Port
-
-The default port is `3000`.
-Specify a custom port via the `--port` flag or the `PORT` environment variable:
-
-```sh
-$ mrc --port 4000
-
-# or
-
-$ PORT=4000 mrc
-```
-
-The pairing web page is automatically opened.
 
 #### Pair Your Device
 
