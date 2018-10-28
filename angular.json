@@ -102,6 +102,9 @@
     "@schematics/angular:component": {
       "changeDetection": "OnPush",
       "spec": false
+    },
+    "@schematics/angular:service": {
+      "flat": false
     }
   },
   "version": 1

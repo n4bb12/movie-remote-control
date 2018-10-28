@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core"
 
+import { Interval } from "client/app/remote-control/Interval"
 import { NavigatorService } from "client/app/remote-control/navigator.service"
 import { WebsocketService } from "client/app/websocket.service"
 
@@ -10,6 +11,9 @@ import { WebsocketService } from "client/app/websocket.service"
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ControlsComponent {
+
+  readonly rewindInterval = new Interval(250, () => this.rewind())
+  readonly fastForwardInterval = new Interval(250, () => this.fastForward())
 
   constructor(
     private navigator: NavigatorService,
