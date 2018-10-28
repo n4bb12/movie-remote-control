@@ -1,20 +1,19 @@
-<div class="keyboard">
-  <input
-    #input
-    type="text"
-    class="input"
-    spellcheck="false"
-    autocorrect="off"
-    autocomplete="off"
-    autocapitalize="off"
-    (keydown)="handleKeydown($event)"
-    (input)="handleKeydown($event); input.value = ''"
-  />
-  <label class="recent">
-    {{ recentKeydown | async }}
-    <app-icon
-      *ngIf="!(recentKeydown | async)"
-      name="more"
-    ></app-icon>
-  </label>
-</div>
+<input
+  #input
+  type="text"
+  class="input"
+  spellcheck="false"
+  autocorrect="off"
+  autocomplete="off"
+  autocapitalize="off"
+  (keydown)="handleKeydown($event)"
+  (input)="handleKeydown($event); input.value = ''"
+/>
+
+<label class="recent">
+  {{ recentKeydown | async }}
+  <app-icon
+    *ngIf="!(recentKeydown | async)"
+    name="more"
+  ></app-icon>
+</label>
