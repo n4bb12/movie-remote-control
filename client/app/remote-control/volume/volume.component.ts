@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnDestroy } from "@angular/core"
 
-import { NavigatorService } from "client/app/remote-control/navigator.service"
-import { WebsocketService } from "client/app/websocket.service"
+import { Interval } from "../Interval"
+import { Volume, WebsocketService } from "../websocket.service"
 
 @Component({
   selector: "app-volume",
@@ -13,15 +13,16 @@ export class VolumeComponent implements OnDestroy {
 
   isPointerDown = false
   sliderBg = "hsl(0, 0%, 33%)"
-  private sendInterval: NodeJS.Timeout
+
+  private state: Volume = 0
+  private readonly volumeInterval = new Interval(250, () => this.ws.changeVolume(this.state))
 
   constructor(
-    private navigator: NavigatorService,
     private ws: WebsocketService,
   ) { }
 
   ngOnDestroy() {
-    clearInterval(this.sendInterval)
+    this.volumeInterval.disable()
   }
 
   handlePan(e) {
@@ -33,28 +34,20 @@ export class VolumeComponent implements OnDestroy {
     const ratio = Math.min(1, 2 * Math.abs(delta) / range)
 
     knobEl.style.transform = `translate(${delta}px)`
-    this.isPointerDown = !e.isFinal
 
     const hue = delta < 0 ? 0 : 120
     const saturation = 100 * ratio
     const lightness = 33
 
+    this.isPointerDown = !e.isFinal
     this.sliderBg = `hsl(${hue}, ${saturation}%, ${lightness}%)`
+    this.state = Math.sign(delta)
 
     if (ratio > 0.5) {
-      if (!this.sendInterval) {
-        this.changeVolume(delta)
-        this.sendInterval = setInterval(() => this.changeVolume(delta), 250)
-      }
+      this.volumeInterval.enable()
     } else {
-      clearInterval(this.sendInterval)
-      delete this.sendInterval
+      this.volumeInterval.disable()
     }
-  }
-
-  private changeVolume = (delta: number) => {
-    this.ws.changeVolume(Math.sign(delta))
-    this.navigator.vibrate()
   }
 
 }

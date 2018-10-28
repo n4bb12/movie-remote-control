@@ -1,6 +1,12 @@
 import { Injectable } from "@angular/core"
 
-import { environment } from "../environments/environment"
+import { environment } from "client/environments/environment"
+
+export enum Volume {
+  DOWN = -1,
+  KEEP = 0,
+  UP = 1,
+}
 
 @Injectable({
   providedIn: "root",
@@ -12,6 +18,45 @@ export class WebsocketService {
 
   constructor() {
     this.connect()
+  }
+
+  moveMouse(deltaX: number, deltaY: number, isFinal: boolean) {
+    const movement = JSON.stringify({ deltaX, deltaY, isFinal })
+    const message = ["MOVE", movement].join("|")
+    this.send(message)
+  }
+
+  clickMouse() {
+    this.send("CLICK")
+    this.vibrate()
+  }
+
+  tapKey(key: string): void {
+    const message = ["KEY", key].join("|")
+    this.send(message)
+  }
+
+  rewind(): void {
+    this.send("REWIND")
+    this.vibrate()
+  }
+
+  pause(): void {
+    this.send("PAUSE")
+    this.vibrate()
+  }
+
+  fastForward(): void {
+    this.send("FAST_FORWARD")
+    this.vibrate()
+  }
+
+  changeVolume(state: Volume): void {
+    if (state) {
+      const message = ["VOLUME", state].join("|")
+      this.send(message)
+      this.vibrate()
+    }
   }
 
   private connect() {
@@ -33,41 +78,15 @@ export class WebsocketService {
     }
   }
 
-  moveMouse(deltaX: number, deltaY: number, isFinal: boolean) {
-    const movement = JSON.stringify({ deltaX, deltaY, isFinal })
-    const message = ["MOVE", movement].join("|")
-    this.send(message)
-  }
-
-  clickMouse() {
-    this.send("CLICK")
-  }
-
-  tapKey(key: string): void {
-    const message = ["KEY", key].join("|")
-    this.send(message)
-  }
-
-  rewind(): void {
-    this.send("REWIND")
-  }
-
-  pause(): void {
-    this.send("PAUSE")
-  }
-
-  fastForward(): void {
-    this.send("FAST_FORWARD")
-  }
-
-  changeVolume(sign: number): void {
-    const message = ["VOLUME", sign].join("|")
-    this.send(message)
-  }
-
   private send(message: string): void {
     this.ws.send(message)
     console.log("client sent:", message)
+  }
+
+  private vibrate() {
+    if ("vibrate" in window.navigator) {
+      window.navigator.vibrate(25)
+    }
   }
 
 }

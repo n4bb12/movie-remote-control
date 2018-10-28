@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core"
 
-import { WebsocketService } from "client/app/websocket.service"
 import { Subject } from "rxjs"
+
+import { WebsocketService } from "../websocket.service"
 
 @Component({
   selector: "app-keyboard",

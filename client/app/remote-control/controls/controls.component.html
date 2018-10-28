@@ -2,8 +2,8 @@
   type="button"
   class="wind"
   (tap)="rewind()"
-  (press)="rewindInterval.start()"
-  (pressup)="rewindInterval.stop()"
+  (press)="rewindInterval.enable()"
+  (pressup)="rewindInterval.disable()"
 >
   <app-icon name="rewind"></app-icon>
 </button>
@@ -20,8 +20,8 @@
   type="button"
   class="wind"
   (tap)="fastForward()"
-  (press)="fastForwardInterval.start()"
-  (pressup)="fastForwardInterval.stop()"
+  (press)="fastForwardInterval.enable()"
+  (pressup)="fastForwardInterval.disable()"
 >
   <app-icon name="fast-forward"></app-icon>
 </button>
