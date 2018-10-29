@@ -73,8 +73,8 @@ export class WebsocketService {
     }
 
     ws.onclose = () => {
-      console.log("connection closed, reconnecting in 5s...")
-      setTimeout(() => this.connect(), 5000)
+      console.log("connection closed, reconnecting in 1s...")
+      setTimeout(() => this.connect(), 1000)
     }
   }
 
