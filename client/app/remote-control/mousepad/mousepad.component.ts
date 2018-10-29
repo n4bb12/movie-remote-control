@@ -14,11 +14,11 @@ export class MousepadComponent {
     private ws: WebsocketService,
   ) { }
 
-  handlePan(e) {
+  handlePan(e: HammerInput) {
     this.ws.moveMouse(e.deltaX, e.deltaY, e.isFinal)
   }
 
-  handleTap(e: KeyboardEvent) {
+  handleTap(e: HammerInput) {
     this.ws.clickMouse()
   }
 

@@ -25,7 +25,7 @@ export class VolumeComponent implements OnDestroy {
     this.volumeInterval.disable()
   }
 
-  handlePan(e) {
+  handlePan(e: HammerInput) {
     const knobEl = e.target as HTMLButtonElement
     const sliderEl = knobEl.parentElement.parentElement as HTMLElement
 

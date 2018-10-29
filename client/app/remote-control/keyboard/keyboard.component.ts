@@ -17,7 +17,7 @@ export class KeyboardComponent {
 
   constructor(private ws: WebsocketService) { }
 
-  handleKeydown(e) {
+  handleKeydown(e: KeyboardEvent & { data: string }) {
     e.preventDefault()
     const key = e.key || e.data
     this.setRecentKeydown(key)
