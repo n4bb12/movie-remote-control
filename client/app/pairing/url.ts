@@ -1,9 +1,5 @@
 import { environment } from "client/environments/environment"
 
-export const pairingUrl = [
-  "http://",
-  environment.ws.host,
-  ":",
-  environment.ws.port,
-  "/remote-control",
-].join("")
+const { scheme, host, port } = environment.ws
+
+export const pairingUrl = `${scheme}://${host}:${port}/remote-control`

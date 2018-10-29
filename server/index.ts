@@ -8,21 +8,26 @@ import path from "path"
 import { acceptWebsocketConnections } from "./websocket"
 
 const args = parseArgs(process.argv.slice(2))
+
+const scheme = "http"
+const host = "localhost"
 const port = args.port || process.env.PORT || 3000
+const url = `${scheme}://${host}:${port}`
 const webroot = path.join(__dirname, "..", "client")
-const url = `http://localhost:${port}`
 
 const app = express()
-const server = new http.Server(app)
+const server = http.createServer(app)
 
 acceptWebsocketConnections(server)
 
 app.use(express.static(webroot))
 app.use(history("index.html", { root: webroot }))
 
-server.listen(port, () => {
+const onListen = () => {
   console.log(`Server is listening on ${url}`)
   if (args.open) {
     open(url)
   }
-})
+}
+
+server.listen(port, onListen)
