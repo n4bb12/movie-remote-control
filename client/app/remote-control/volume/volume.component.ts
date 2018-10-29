@@ -35,7 +35,7 @@ export class VolumeComponent implements OnDestroy {
 
     knobEl.style.transform = `translate(${delta}px)`
 
-    const hue = delta < 0 ? 0 : 120
+    const hue = delta < 0 ? 12 : 120
     const saturation = 100 * ratio
     const lightness = 33
 
