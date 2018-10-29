@@ -5,9 +5,6 @@ import { RouterModule } from "@angular/router"
 import { AppComponent } from "./app.component"
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
@@ -24,6 +21,9 @@ import { AppComponent } from "./app.component"
         redirectTo: "pairing",
       },
     ], {}),
+  ],
+  declarations: [
+    AppComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,6 +1,8 @@
-<h1>Pair your device</h1>
-Open the following URL in your browser or scan the below QR code:
-<div>
-  <strong>{{ url }}</strong>
+<div class="pairing" [appAwaitFont]="{ family: 'Krub' }">
+  <h1>Pair your device</h1>
+  Open the following URL in your browser or scan the below QR code:
+  <div>
+    <strong>{{ url }}</strong>
+  </div>
+  <app-qrcode></app-qrcode>
 </div>
-<app-qrcode></app-qrcode>

@@ -45,6 +45,7 @@
     "core-js": "^2.5.4",
     "express": "^4.16.4",
     "express-history-api-fallback": "^2.2.1",
+    "fontfaceobserver": "^2.0.13",
     "getopts": "^2.2.2",
     "hammerjs": "^2.0.8",
     "normalize-scss": "^7.0.1",
@@ -52,6 +53,7 @@
     "qrcode": "^1.3.0",
     "robotjs": "^0.5.1",
     "rxjs": "~6.3.3",
+    "typeface-krub": "^0.0.61",
     "w3c-keys": "^0.3.6",
     "ws": "^6.1.0",
     "zone.js": "~0.8.26"
