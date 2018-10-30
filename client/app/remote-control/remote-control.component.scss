@@ -1,32 +1,27 @@
 :host {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  display: grid;
+  grid-auto-rows: 1fr auto auto auto;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-gap: 1rem;
   padding: 1rem;
-  margin: 0 auto;
   background: #333333;
   color: #bbbbbb;
   user-select: none;
 }
 
 app-mousepad {
-  flex: 1;
-  margin-bottom: 1rem;
+  display: none;
 }
 
 app-keyboard {
-  flex: none;
-  margin-bottom: .5rem;
+  align-self: end;
 }
 
-app-controls {
-  flex: none;
-  margin-bottom: .5rem;
-}
-
-app-volume {
-  flex: none;
+@media (min-height: 360px) {
+  app-mousepad {
+    display: block;
+  }
 }
