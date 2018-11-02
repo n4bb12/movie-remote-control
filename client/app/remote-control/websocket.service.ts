@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core"
 
-import { environment } from "client/environments/environment"
+import { environment } from "../../environments/environment"
 
 export enum Volume {
   DOWN = -1,

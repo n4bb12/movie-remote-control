@@ -1,4 +1,4 @@
-import { environment } from "client/environments/environment"
+import { environment } from "../../environments/environment"
 
 const { scheme, host, port } = environment.ws
 

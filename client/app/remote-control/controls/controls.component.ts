@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnDestroy } from "@angular/core"
 
-import { Interval } from "client/app/remote-control/Interval"
-
+import { Interval } from "../Interval"
 import { WebsocketService } from "../websocket.service"
 
 @Component({

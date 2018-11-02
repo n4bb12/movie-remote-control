@@ -16,8 +16,8 @@
   "license": "ISC",
   "author": "Abraham Schilling",
   "bin": {
-    "mrc": "dist/server",
-    "movie-remote-control": "dist/server"
+    "mrc": "dist/server/cli",
+    "movie-remote-control": "dist/server/cli"
   },
   "scripts": {
     "build": "rimraf dist && run-p build:*",
@@ -30,7 +30,8 @@
     "lint": "run-p lint:*",
     "lint:client": "ng lint",
     "lint:server": "tslint --project server",
-    "prod": "yarn build && node dist/server --port 3000"
+    "prod": "node dist/server/cli --port 2178",
+    "electron": "electron dist/server/electron --port 2178"
   },
   "dependencies": {
     "@angular/animations": "~7.0.2",
@@ -43,6 +44,7 @@
     "@angular/platform-browser-dynamic": "~7.0.2",
     "@angular/router": "~7.0.2",
     "core-js": "^2.5.4",
+    "electron": "^3.0.7",
     "express": "^4.16.4",
     "express-history-api-fallback": "^2.2.1",
     "fontfaceobserver": "^2.0.13",

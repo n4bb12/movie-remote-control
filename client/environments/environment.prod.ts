@@ -3,6 +3,6 @@ export const environment = {
   ws: {
     scheme: "http",
     host: "192.168.178.29",
-    port: 3000,
+    port: 2178,
   },
 }

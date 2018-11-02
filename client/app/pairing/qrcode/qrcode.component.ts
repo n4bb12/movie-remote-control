@@ -6,8 +6,9 @@ import {
   ViewChild,
 } from "@angular/core"
 
-import { pairingUrl } from "client/app/pairing/url"
 import QRCode from "qrcode"
+
+import { pairingUrl } from "../url"
 
 @Component({
   selector: "app-qrcode",
