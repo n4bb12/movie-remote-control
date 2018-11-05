@@ -30,8 +30,8 @@
     "lint": "run-p lint:*",
     "lint:client": "ng lint",
     "lint:server": "tslint --project server",
-    "prod": "node dist/server/cli --port 2178",
-    "electron": "electron dist/server/electron --port 2178"
+    "prod": "node dist/server/cli --port 3000",
+    "electron": "electron dist/server/electron --port 3000"
   },
   "dependencies": {
     "@angular/animations": "~7.0.2",

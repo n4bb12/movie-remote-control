@@ -16,7 +16,7 @@ async function createWindow() {
     icon: path.join(__dirname, "..", "client", "assets", "webapp", "icon.png"),
   })
 
-  window.loadURL("http://localhost:2178/pairing")
+  window.loadURL("http://localhost:3000/pairing")
   window.focus()
 }
 

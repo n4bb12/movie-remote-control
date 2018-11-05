@@ -62,7 +62,7 @@ This adds the shell the commands `mrc` or `movie-remote-control`.
 Start the server and open the pairing page:
 
 ```sh
-$ movie-remote-control --port 2178 --open
+$ movie-remote-control --port 3000 --open
 ```
 
 #### Pair Your Device
