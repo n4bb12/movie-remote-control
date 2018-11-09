@@ -1,10 +1,18 @@
 {
   "$schema": "http://json.schemastore.org/tslint",
-  "extends": ["tslint-angular", "@n4bb12/config-tslint"],
+  "extends": [
+    "tslint-angular",
+    "@n4bb12/config-tslint"
+  ],
   "rules": {
     "jsdoc-format": false,
-    "member-ordering": false,
-    "max-line-length": { "severity": "warning", "options": 120 }
+    "max-line-length": {
+      "options": 120,
+      "severity": "warning"
+    },
+    "member-ordering": false
   },
-  "rulesDirectory": ["node_modules/codelyzer"]
+  "rulesDirectory": [
+    "node_modules/codelyzer"
+  ]
 }

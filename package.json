@@ -16,8 +16,8 @@
   "license": "ISC",
   "author": "Abraham Schilling",
   "bin": {
-    "mrc": "dist/server/cli",
-    "movie-remote-control": "dist/server/cli"
+    "movie-remote-control": "dist/server/cli",
+    "mrc": "dist/server/cli"
   },
   "scripts": {
     "build": "rimraf dist && run-p build:*",
@@ -27,11 +27,11 @@
     "dev": "run-p dev:*",
     "dev:client": "ng serve client",
     "dev:server": "nodemon --watch server --ext ts --exec yarn ts-node --project server/tsconfig.json server --port 3200",
+    "electron": "electron dist/server/electron --port 3000",
     "lint": "run-p lint:*",
     "lint:client": "ng lint",
     "lint:server": "tslint --project server",
-    "prod": "node dist/server/cli --port 3000",
-    "electron": "electron dist/server/electron --port 3000"
+    "prod": "node dist/server/cli --port 3000"
   },
   "dependencies": {
     "@angular/animations": "~7.0.2",
