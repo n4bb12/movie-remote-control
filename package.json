@@ -1,5 +1,5 @@
 {
-  "name": "movie-client",
+  "name": "movie-remote-control",
   "version": "0.0.0",
   "private": true,
   "description": "Watch movies using your phone as a remote control",
@@ -10,9 +10,9 @@
     "remote",
     "video"
   ],
-  "homepage": "https://github.com/n4bb12/movie-client/blob/master/README.md",
-  "bugs": "https://github.com/n4bb12/movie-client/issues",
-  "repository": "github:n4bb12/movie-client",
+  "homepage": "https://github.com/n4bb12/movie-remote-control/blob/master/README.md",
+  "bugs": "https://github.com/n4bb12/movie-remote-control/issues",
+  "repository": "github:n4bb12/movie-remote-control",
   "license": "ISC",
   "author": "Abraham Schilling",
   "bin": {
