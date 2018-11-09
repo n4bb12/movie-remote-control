@@ -1,8 +1,0 @@
-[build]
-  command = "yarn build -c production"
-  publish = "dist/client"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200

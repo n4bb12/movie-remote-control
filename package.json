@@ -16,22 +16,22 @@
   "license": "ISC",
   "author": "Abraham Schilling",
   "bin": {
-    "movie-remote-control": "dist/server/cli",
-    "mrc": "dist/server/cli"
+    "movie-remote-control": "build/server/cli",
+    "mrc": "build/server/cli"
   },
   "scripts": {
-    "build": "rimraf dist && run-p build:*",
+    "build": "rimraf build && run-p build:*",
     "build:client": "ng build client -c production --no-progress",
     "build:icons": "svg-sprite --symbol --symbol-example --dest client/assets --symbol-dest . --symbol-sprite icon-sprite.svg --symbol-example-dest icon-sprite.html \"client/assets/icons/*.svg\"",
     "build:server": "tsc --project server/tsconfig.json",
     "dev": "run-p dev:*",
     "dev:client": "ng serve client",
     "dev:server": "nodemon --watch server --ext ts --exec yarn ts-node --project server/tsconfig.json server --port 3200",
-    "electron": "electron dist/server/electron --port 3000",
+    "electron": "electron build/server/electron --port 3000",
     "lint": "run-p lint:*",
     "lint:client": "ng lint",
     "lint:server": "tslint --project server",
-    "prod": "node dist/server/cli --port 3000"
+    "prod": "node build/server/cli --port 3000"
   },
   "dependencies": {
     "@angular/animations": "~7.0.2",

@@ -3,7 +3,7 @@
   "compilerOptions": {
     "lib": ["es2018"],
     "module": "commonjs",
-    "outDir": "../dist/server",
+    "outDir": "../build/server",
     "target": "es2015",
     "types": ["node"]
   },

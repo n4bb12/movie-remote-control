@@ -43,7 +43,7 @@
             ],
             "index": "client/index.html",
             "main": "client/main.ts",
-            "outputPath": "dist/client",
+            "outputPath": "build/client",
             "polyfills": "client/polyfills.ts",
             "scripts": [],
             "stylePreprocessorOptions": {
