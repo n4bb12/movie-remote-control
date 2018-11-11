@@ -38,8 +38,7 @@
           "options": {
             "assets": [
               "client/favicon.ico",
-              "client/assets",
-              "client/robots.txt"
+              "client/assets"
             ],
             "index": "client/index.html",
             "main": "client/main.ts",

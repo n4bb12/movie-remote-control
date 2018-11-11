@@ -6,9 +6,9 @@ import openWithDefaultApp from "opn"
 import { acceptWebsocketConnections } from "./websocket"
 
 export interface Options {
-  scheme: string
-  host: string
-  port: number
+  scheme?: string
+  host?: string
+  port?: number
   webroot: string
   open: boolean
 }
@@ -23,7 +23,7 @@ export function startServer({
   return new Promise(resolve => {
     const app = express()
     const server = http.createServer(app)
-    const url = `${scheme}://${host}:${port}`
+    const url = `${scheme || "http"}://${host || "localhost"}:${port || 3000}`
 
     acceptWebsocketConnections(server)
 
