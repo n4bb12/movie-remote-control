@@ -1,6 +1,6 @@
 {
   "name": "movie-remote-control",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "Watch movies using your phone as a remote control",
   "keywords": [
