@@ -1,7 +1,6 @@
 {
   "name": "movie-remote-control",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.0.2",
   "description": "Watch movies using your phone as a remote control",
   "keywords": [
     "control",
@@ -15,6 +14,9 @@
   "repository": "github:n4bb12/movie-remote-control",
   "license": "ISC",
   "author": "Abraham Schilling",
+  "files": [
+    "dist"
+  ],
   "main": "build/server/electron.js",
   "bin": {
     "movie-remote-control": "build/server/cli.js",
