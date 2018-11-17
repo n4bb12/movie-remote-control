@@ -26,7 +26,7 @@
     "build": "run-s build:clean build:icons && run-p build:client build:server",
     "build:clean": "rimraf build",
     "build:client": "ng build client -c production --no-progress",
-    "build:icons": "svg-sprite --symbol --symbol-example --dest client/assets --symbol-dest . --symbol-sprite icon-sprite.svg --symbol-example-dest icon-sprite.html \"client/assets/icons/*.svg\"",
+    "build:icons": "svg-sprite --symbol --dest client/assets --symbol-dest . --symbol-sprite icon-sprite.svg \"client/assets/icons/*.svg\"",
     "build:server": "tsc --project server/tsconfig.json",
     "dev": "run-p dev:*",
     "dev:client": "ng serve client",
