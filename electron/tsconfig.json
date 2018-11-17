@@ -1,14 +1,12 @@
 {
-  "$schema": "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "lib": [
       "es2018"
     ],
     "module": "commonjs",
-    "outDir": "../build/server",
-    "target": "es2015",
     "types": [
-      "node"
+      "node",
+      "electron"
     ]
   },
   "extends": "../tsconfig.json"

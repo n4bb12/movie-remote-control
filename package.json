@@ -15,9 +15,9 @@
   "license": "ISC",
   "author": "Abraham Schilling",
   "files": [
-    "dist"
+    "build"
   ],
-  "main": "build/server/electron.js",
+  "main": "electron/main.js",
   "bin": {
     "movie-remote-control": "build/server/cli.js",
     "mrc": "build/server/cli.js"
@@ -30,7 +30,8 @@
     "build:server": "tsc --project server/tsconfig.json",
     "dev": "run-p dev:*",
     "dev:client": "ng serve client",
-    "dev:server": "nodemon --watch server --ext ts --exec yarn ts-node --project server/tsconfig.json server --port 3200",
+    "dev:electron": "wait-on http-get://localhost:4200 && electron electron/main.js",
+    "dev:server": "nodemon --watch server --ext ts --exec yarn ts-node --project server/tsconfig.json server/cli.ts --port 3200",
     "lint": "run-p lint:*",
     "lint:client": "ng lint",
     "lint:server": "tslint --project server",
@@ -82,7 +83,8 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "tslint-angular": "^1.1.2",
-    "typescript": "~3.1.6"
+    "typescript": "~3.1.6",
+    "wait-on": "^3.2.0"
   },
   "$schema": "http://json.schemastore.org/package"
 }
