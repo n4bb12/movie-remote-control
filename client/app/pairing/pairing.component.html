@@ -1,10 +1,9 @@
-<div
-  class="pairing"
-  [appAwaitFont]="{ family: 'Krub' }"
->
-  <h1>Pair your device</h1>
-  <p>Open the following URL in your browser or scan the below QR code:</p>
-  <p class="url">{{ url }}</p>
+<div [appAwaitFont]="{ family: 'Krub' }">
+  <div class="pairing">
+    <h1>Pair your device</h1>
+    <p>Open the following URL in your browser or scan the below QR code:</p>
+    <p class="url">{{ url }}</p>
 
-  <app-qrcode></app-qrcode>
+    <app-qrcode></app-qrcode>
+  </div>
 </div>
