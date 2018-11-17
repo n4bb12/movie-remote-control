@@ -29,7 +29,7 @@ jobs:
       - image: circleci/node:10
     steps:
       - attach_workspace: { at: "." }
-      - run: yarn build --no-progress
+      - run: yarn build
       - persist_to_workspace: { root: ".", paths: "build" }
 
 workflows:
