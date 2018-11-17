@@ -26,11 +26,7 @@
 </p>
 
 <hr>
-
-<p align="center">
-⚠️ Early development, please don't use. ⚠️
-</p>
-
+  <b>Early development, nothing here yet...</b>
 <hr>
 
 <img src="client/assets/screenshots/remote-control.png" height="450">

@@ -46,9 +46,13 @@
             "polyfills": "client/polyfills.ts",
             "scripts": [],
             "stylePreprocessorOptions": {
-              "includePaths": ["client"]
+              "includePaths": [
+                "client"
+              ]
             },
-            "styles": ["client/styles.scss"],
+            "styles": [
+              "client/styles.scss"
+            ],
             "tsConfig": "client/tsconfig.json"
           }
         },
@@ -66,9 +70,13 @@
             }
           },
           "options": {
-            "exclude": ["**/node_modules/**"],
+            "exclude": [
+              "**/node_modules/**"
+            ],
             "fix": true,
-            "tsConfig": ["client/tsconfig.json"]
+            "tsConfig": [
+              "client/tsconfig.json"
+            ]
           }
         },
         "serve": {
@@ -98,12 +106,25 @@
     }
   },
   "schematics": {
+    "@schematics/angular:class": {
+      "spec": false
+    },
     "@schematics/angular:component": {
       "changeDetection": "OnPush",
       "spec": false
     },
+    "@schematics/angular:directive": {
+      "spec": false
+    },
+    "@schematics/angular:module": {
+      "spec": false
+    },
+    "@schematics/angular:pipe": {
+      "spec": true
+    },
     "@schematics/angular:service": {
       "flat": false
+      "spec": true
     }
   },
   "version": 1
