@@ -4,9 +4,14 @@
 
 export const environment = {
   production: false,
-  ws: {
+  pairing: {
     scheme: "http",
-    host: "localhost",
+    host: "192.168.178.29",
+    port: 4200,
+  },
+  websocket: {
+    scheme: "ws",
+    host: "192.168.178.29",
     port: 3200,
   },
 }

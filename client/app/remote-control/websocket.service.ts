@@ -2,6 +2,8 @@ import { Injectable } from "@angular/core"
 
 import { environment } from "../../environments/environment"
 
+const { scheme, host, port } = environment.websocket
+
 export enum Volume {
   DOWN = -1,
   KEEP = 0,
@@ -13,7 +15,7 @@ export enum Volume {
 })
 export class WebsocketService {
 
-  private readonly url = `ws://${environment.ws.host}:${environment.ws.port}`
+  private readonly url = `${scheme}://${host}:${port}`
   private ws: WebSocket
 
   constructor() {
