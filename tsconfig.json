@@ -13,7 +13,7 @@
     "moduleResolution": "node",
     "outDir": "./build/out-tsc",
     "skipLibCheck": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "target": "es5"
   }
 }

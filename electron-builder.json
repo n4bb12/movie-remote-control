@@ -1,0 +1,11 @@
+{
+  "appId": "n4bb12.movie-remote-control",
+  "files": [
+    "build/**/*",
+    "node_modules/**/*",
+    "package.json"
+  ],
+  "win": {
+    "icon": "build/client/favicon.ico"
+  }
+}
