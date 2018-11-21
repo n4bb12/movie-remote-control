@@ -1,3 +1,5 @@
+<img src="client/assets/screenshots/remote-control.png" height="500" align="right">
+
 <h1 align="center">
   <img alt="Logo" src="https://image.flaticon.com/icons/svg/421/421829.svg" height="48">
   Movie Remote Control
@@ -25,45 +27,47 @@
   </a>
 </p>
 
-<img src="client/assets/screenshots/remote-control.png" height="450">
+## Install
 
-## Features
-
-| What                      | Effect                          | Notes                                                                                                                              |
-| ------------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| 👈&nbsp;Tap               | <i>Click</i>                    |                                                                                                                                    |
-| 💨&nbsp;Pan               | <i>Mousemove</i>                | To accomodate for larger movie screens the movement distance is doubled.                                                           |
-| #️⃣&nbsp;Keyboard         | <i>Keypress</i>                 | Tap on the input field to open the keyboard, type anything.                                                                        |
-| ⏪&nbsp;Rewind             | <kbd>←</kbd> + <kbd>Enter</kbd> | Some video players require pressing enter to confirm.                                                                              |
-| 🆗&nbsp;Pause             | <kbd>Spacebar</kbd>             |                                                                                                                                    |
-| ⏩&nbsp;Fast&#8209;forward | <kbd>→</kbd> + <kbd>Enter</kbd> |                                                                                                                                    |
-| 🔉&nbsp;Volume            | <kbd>↑</kbd> \| <kbd>↓</kbd>    | Drag left or right. Volume events are throttled, so you can keep the knob attached to your finger, until the volume is satisfying. |
+```
+yarn global add movie-remote-control
+```
 
 ## Usage
 
-#### Install
+### Start Server
 
-```sh
-$ npm install --global movie-remote-control
+Start the server:
+
+```
+movie-remote-control
+
+Optional flags:
+  --port <PORT>     Customize the port (default 3000)
+  --open            Automatically open the pairing page in the default browser
 ```
 
-This adds the shell the commands `mrc` or `movie-remote-control`.
+### Pair Device
 
-#### Start Server
-
-Start the server and open the pairing page:
-
-```sh
-$ movie-remote-control --port 3000 --open
-```
-
-#### Pair Your Device
-
-Either scan the displayed bar code or manually open the highlighted URL on your mobile phone.
+Open http://localhost:3000 in your browser and scan the QR code on your mobile phone.
 
 <p align="center">
-  <img src="client/assets/screenshots/pairing.png">
+  <img src="client/assets/screenshots/pairing.png" height="250">
 </p>
+
+### Controls
+
+The controls trigger the following effects on your computer:
+
+| Action                    | How to use                                                                       | Effect                                                                                            |
+| ------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| 👈&nbsp;Tap               | Tap somewhere on the touch pad.                                                  | <i>Click</i>                                                                                      |
+| 💨&nbsp;Pan               | Pan accross the touch pad.                                                       | <i>Mousemove</i><br>(To accomodate for the larger movie screen, the movement distance is doubled) |
+| #️⃣&nbsp;Keyboard         | Tap on the input field to open the keyboard, type anything.                      | <i>Keypress</i>                                                                                   |
+| ⏪&nbsp;Rewind             | Tap the rewind button next to the pause button.                                  | <kbd>←</kbd> + <kbd>Enter</kbd><br>(Some video players require pressing enter to confirm)         |
+| 🆗&nbsp;Pause             | Tap the large pause button.                                                      | <kbd>Spacebar</kbd>                                                                               |
+| ⏩&nbsp;Fast&#8209;forward | Tap the fast-forward button next to the pause button.                            | <kbd>→</kbd> + <kbd>Enter</kbd><br>(Some video players require pressing enter to confirm)         |
+| 🔉&nbsp;Volume            | Drag the volume slider left or right until the volume reaches the desired level. | <kbd>↑</kbd> \| <kbd>↓</kbd>                                                                      |
 
 #
 
