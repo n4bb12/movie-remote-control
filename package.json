@@ -17,10 +17,8 @@
   "files": [
     "build"
   ],
-  "main": "electron/main.js",
   "bin": {
-    "movie-remote-control": "build/server/cli.js",
-    "mrc": "build/server/cli.js"
+    "movie-remote-control": "build/server/cli.js"
   },
   "scripts": {
     "build": "run-s build:clean build:icons && run-p build:client build:server",
@@ -30,7 +28,6 @@
     "build:server": "tsc --project server/tsconfig.json",
     "dev": "run-p dev:*",
     "dev:client": "ng serve client",
-    "dev:electron": "wait-on http-get://localhost:4200 && electron electron/main.js",
     "dev:server": "nodemon --watch server --ext ts --exec yarn ts-node --project server/tsconfig.json server/cli.ts --port 3200",
     "lint": "run-p lint:*",
     "lint:client": "ng lint",
@@ -48,7 +45,6 @@
     "@angular/platform-browser-dynamic": "~7.0.4",
     "@angular/router": "~7.0.4",
     "core-js": "^2.5.4",
-    "electron-debug": "^2.0.0",
     "express": "^4.16.4",
     "express-history-api-fallback": "^2.2.1",
     "fontfaceobserver": "^2.0.13",
@@ -75,7 +71,6 @@
     "@types/node": "~10.12.9",
     "codelyzer": "~4.5.0",
     "cross-env": "^5.2.0",
-    "electron": "^3.0.10",
     "nodemon": "^1.18.6",
     "npm-run-all": "^4.1.3",
     "rimraf": "^2.6.2",

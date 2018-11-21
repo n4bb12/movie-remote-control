@@ -8,40 +8,36 @@
 </p>
 
 <p align="center">
-  <a href="https://circleci.com/gh/n4bb12/workflows/movie-remote-control">
-    <img alt="CircleCI" src="https://flat.badgen.net/circleci/github/n4bb12/movie-remote-control?icon=circleci">
+  <a href="https://www.npmjs.com/package/@n4bb12/config-tslint">
+    <img alt="Version" src="https://flat.badgen.net/npm/v/@n4bb12/config-tslint?icon=npm">
+  </a>
+  <a href="https://raw.githubusercontent.com/n4bb12/config-tslint/master/LICENSE">
+    <img alt="License" src="https://flat.badgen.net/github/license/n4bb12/config-tslint?icon=github">
+  </a>
+  <a href="https://github.com/n4bb12/movie-remote-control/issues/new">
+    <img alt="Issues" src="https://flat.badgen.net/badge/github/create issue/pink?icon=github">
   </a>
   <a href="https://david-dm.org/n4bb12/movie-remote-control">
     <img alt="Dependencies" src="https://flat.badgen.net/david/dep/n4bb12/movie-remote-control?icon=npm">
   </a>
-  <a href="https://raw.githubusercontent.com/n4bb12/movie-remote-control/master/LICENSE">
-    <img alt="License" src="https://flat.badgen.net/github/license/n4bb12/movie-remote-control?icon=github">
-  </a>
-  <!-- <a href="https://app.netlify.com/sites/movie-remote-control/deploys">
-    <img alt="Netlify" src="https://img.shields.io/badge/netlify-movie-remote-control.netlify.com-00ad9f.svg?style=flat-square&logo=netlify">
-  </a> -->
-  <a href="https://github.com/n4bb12/movie-remote-control/issues/new">
-    <img alt="Issues" src="https://flat.badgen.net/badge/github/create issue/pink?icon=github">
+  <a href="https://circleci.com/gh/n4bb12/workflows/movie-remote-control">
+    <img alt="CircleCI" src="https://flat.badgen.net/circleci/github/n4bb12/movie-remote-control?icon=circleci">
   </a>
 </p>
-
-<hr>
-  <b>Early development, nothing here yet...</b>
-<hr>
 
 <img src="client/assets/screenshots/remote-control.png" height="450">
 
 ## Features
 
-| What                | Effect                          | Notes                                                                                                                              |
-| ------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| 👈&nbsp;Tap         | <i>Click</i>                    |                                                                                                                                    |
-| 💨&nbsp;Pan         | <i>Mousemove</i>                | To accomodate for larger movie screens the movement distance is doubled.                                                           |
-| #️⃣&nbsp;Keyboard   | <i>Keypress</i>                 | Tap on the input field to open the keyboard, type anything.                                                                        |
-| ⏪&nbsp;Rewind       | <kbd>←</kbd> + <kbd>Enter</kbd> | Some video players require pressing enter to confirm.                                                                              |
-| 🆗&nbsp;Pause       | <kbd>Spacebar</kbd>             |                                                                                                                                    |
+| What                      | Effect                          | Notes                                                                                                                              |
+| ------------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| 👈&nbsp;Tap               | <i>Click</i>                    |                                                                                                                                    |
+| 💨&nbsp;Pan               | <i>Mousemove</i>                | To accomodate for larger movie screens the movement distance is doubled.                                                           |
+| #️⃣&nbsp;Keyboard         | <i>Keypress</i>                 | Tap on the input field to open the keyboard, type anything.                                                                        |
+| ⏪&nbsp;Rewind             | <kbd>←</kbd> + <kbd>Enter</kbd> | Some video players require pressing enter to confirm.                                                                              |
+| 🆗&nbsp;Pause             | <kbd>Spacebar</kbd>             |                                                                                                                                    |
 | ⏩&nbsp;Fast&#8209;forward | <kbd>→</kbd> + <kbd>Enter</kbd> |                                                                                                                                    |
-| 🔉&nbsp;Volume      | <kbd>↑</kbd> \| <kbd>↓</kbd>    | Drag left or right. Volume events are throttled, so you can keep the knob attached to your finger, until the volume is satisfying. |
+| 🔉&nbsp;Volume            | <kbd>↑</kbd> \| <kbd>↓</kbd>    | Drag left or right. Volume events are throttled, so you can keep the knob attached to your finger, until the volume is satisfying. |
 
 ## Usage
 
