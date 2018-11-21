@@ -35,7 +35,9 @@
     "lint": "run-p lint:*",
     "lint:client": "ng lint",
     "lint:server": "tslint --project server",
-    "prod": "node build/server/cli.js --port 3000"
+    "prepack": "yarn build",
+    "prod": "node build/server/cli.js --port 3000",
+    "test": "echo \"Not implemented\""
   },
   "dependencies": {
     "@angular/animations": "~7.0.4",
