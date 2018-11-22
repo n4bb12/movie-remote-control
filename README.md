@@ -10,11 +10,11 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@n4bb12/config-tslint">
-    <img alt="Version" src="https://flat.badgen.net/npm/v/@n4bb12/config-tslint?icon=npm">
+  <a href="https://www.npmjs.com/package/movie-remote-control">
+    <img alt="Version" src="https://flat.badgen.net/npm/v/movie-remote-control?icon=npm">
   </a>
-  <a href="https://raw.githubusercontent.com/n4bb12/config-tslint/master/LICENSE">
-    <img alt="License" src="https://flat.badgen.net/github/license/n4bb12/config-tslint?icon=github">
+  <a href="https://raw.githubusercontent.com/n4bb12/movie-remote-control/master/LICENSE">
+    <img alt="License" src="https://flat.badgen.net/github/license/n4bb12/movie-remote-control?icon=github">
   </a>
   <a href="https://github.com/n4bb12/movie-remote-control/issues/new">
     <img alt="Issues" src="https://flat.badgen.net/badge/github/create issue/pink?icon=github">
@@ -44,7 +44,7 @@ movie-remote-control
 
 Optional flags:
   --port <PORT>     Customize the port (default 3000)
-  --open            Automatically open the pairing page in the default browser
+  --open            Open the pairing page in the default browser
 ```
 
 ### Pair Device
