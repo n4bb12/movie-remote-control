@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core"
 
+import { ReplaySubject } from "rxjs"
 import { environment } from "../../environments/environment"
 
 const { scheme, host, port } = environment.websocket
@@ -14,6 +15,8 @@ export enum Volume {
   providedIn: "root",
 })
 export class WebsocketService {
+
+  readonly connected = new ReplaySubject<boolean>(1)
 
   private readonly url = `${scheme}://${host}:${port}`
   private ws: WebSocket
@@ -63,10 +66,12 @@ export class WebsocketService {
 
   private connect() {
     const ws = this.ws = new WebSocket(this.url)
+    this.connected.next(false)
 
     ws.onopen = () => {
       console.log("connection opened")
       this.send("PING")
+      this.connected.next(true)
     }
 
     ws.onmessage = evt => {
@@ -77,6 +82,7 @@ export class WebsocketService {
     ws.onclose = () => {
       console.log("connection closed, reconnecting in 1s...")
       setTimeout(() => this.connect(), 1000)
+      this.connected.next(false)
     }
   }
 
