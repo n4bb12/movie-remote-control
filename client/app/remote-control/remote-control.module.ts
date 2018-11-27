@@ -20,12 +20,12 @@ import { VolumeComponent } from "./volume/volume.component"
     ]),
   ],
   declarations: [
-    RemoteControlComponent,
-    MousepadComponent,
     ControlsComponent,
-    VolumeComponent,
-    KeyboardComponent,
     IconComponent,
+    KeyboardComponent,
+    MousepadComponent,
+    RemoteControlComponent,
+    VolumeComponent,
   ],
 })
 export class RemoteControlModule { }

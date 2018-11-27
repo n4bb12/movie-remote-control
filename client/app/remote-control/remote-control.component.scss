@@ -1,4 +1,5 @@
 :host {
+  position: relative;
   width: 100%;
   height: 100%;
   display: grid;
@@ -8,7 +9,6 @@
   grid-gap: 1rem;
   padding: 1rem;
   background: #333333;
-  color: #bbbbbb;
   user-select: none;
 }
 

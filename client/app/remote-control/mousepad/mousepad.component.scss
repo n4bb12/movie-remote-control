@@ -11,4 +11,8 @@ button {
   border-radius: .5rem;
   cursor: move;
   transition: .1s ease-out;
+
+  app-icon {
+    font-size: 3rem;
+  }
 }

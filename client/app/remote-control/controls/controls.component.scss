@@ -15,9 +15,17 @@
 .pause {
   width: 8rem;
   height: 8rem;
+
+  app-icon {
+    font-size: 3rem;
+  }
 }
 
 .wind {
   width: 4rem;
   height: 4rem;
+
+  app-icon {
+    font-size: 1.5rem;
+  }
 }
