@@ -2,6 +2,9 @@ import { CommonModule } from "@angular/common"
 import { NgModule } from "@angular/core"
 import { RouterModule } from "@angular/router"
 
+import {
+  ConnectionOverlayComponent,
+} from "./connection-overlay/connection-overlay.component"
 import { ControlsComponent } from "./controls/controls.component"
 import { IconComponent } from "./icon/icon.component"
 import { KeyboardComponent } from "./keyboard/keyboard.component"
@@ -20,6 +23,7 @@ import { VolumeComponent } from "./volume/volume.component"
     ]),
   ],
   declarations: [
+    ConnectionOverlayComponent,
     ControlsComponent,
     IconComponent,
     KeyboardComponent,

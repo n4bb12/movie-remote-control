@@ -1,0 +1,10 @@
+<div
+  class="__overlay"
+  *ngIf="!(connected | async)"
+  [class.--connected]="connected | async"
+>
+  <div class="__center-box">
+    <app-icon name="network"></app-icon>
+    Connecting...
+  </div>
+</div>
