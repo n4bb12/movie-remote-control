@@ -5,19 +5,19 @@
   padding: 1rem;
 }
 
-.pairing {
+.__pairing {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.url {
+.__url {
   font-weight: bold;
   font-size: 110%;
 }
 
-p {
+.__description {
   margin: 0;
   margin-bottom: .5rem;
 }

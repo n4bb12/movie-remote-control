@@ -4,28 +4,28 @@
   justify-content: center;
 }
 
-.pause,
-.wind {
+.__pause,
+.__wind {
   position: relative;
   display: block;
   padding: 1rem;
   margin: .25rem;
 }
 
-.pause {
+.__pause {
   width: 8rem;
   height: 8rem;
 
-  icon {
+  Icon {
     font-size: 3rem;
   }
 }
 
-.wind {
+.__wind {
   width: 4rem;
   height: 4rem;
 
-  icon {
+  Icon {
     font-size: 1.5rem;
   }
 }

@@ -10,7 +10,7 @@
   (input)="handleKeydown($event); input.value = ''"
 />
 
-<label class="recent">
+<label class="__recent">
   {{ recentKeydown | async }}
   <Icon
     *ngIf="!(recentKeydown | async)"

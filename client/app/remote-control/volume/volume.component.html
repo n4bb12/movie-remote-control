@@ -1,12 +1,12 @@
 <div
-  class="volume"
+  class="__volume"
   [class.--active]="isPointerDown"
 >
-  <div class="slider" [style.background]="sliderBg">
-    <div class="coordinate-system">
+  <div class="__track" [style.background]="sliderBg">
+    <div class="__knob_origin">
       <button
         type="button"
-        class="knob"
+        class="__knob"
         (pan)="handlePan($event)"
       >
         <Icon name="speaker-5"></Icon>

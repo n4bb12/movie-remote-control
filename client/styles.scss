@@ -1,6 +1,15 @@
 @import '~normalize-scss/sass/normalize/import-now';
 @import '~typeface-krub/index.css';
 
+body {
+  --border-radius: 1rem;
+  --box-shadow: 0 1px 1px 1px #222222;
+  --palette-primary: #ff5023;
+  --palette-button: #aaaaaa;
+  --palette-input: #555555;
+  --palette-text: #aaaaaa;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -20,10 +29,10 @@ textarea {
   min-width: 0;
   width: 100%;
   outline: none;
-  box-shadow: inset 0 1px 1px 1px #222222;
+  box-shadow: inset var(--box-shadow);
   border: 0;
-  border-radius: .5rem;
-  background: #555555;
+  border-radius: var(--border-radius);
+  background: var(--palette-input);
   color: inherit;
   transition: .1s ease-out;
 
@@ -36,11 +45,11 @@ textarea {
 
 button {
   outline: none;
-  box-shadow: 0 1px 1px 1px #222222;
+  box-shadow: var(--box-shadow);
   border-width: 2px;
   border-radius: 50%;
   border-color: #dddddd;
-  background: #aaaaaa;
+  background: var(--palette-button);
   transition: .2s ease-out;
   cursor: pointer;
 

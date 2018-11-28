@@ -2,8 +2,10 @@
   position: relative;
   display: block;
   height: 3rem;
+  font-size: 1.25rem;
+  color: var(--palette-text);
 
-  .recent {
+  .__recent {
     position: absolute;
     top: 0;
     right: 0;
@@ -13,6 +15,9 @@
     align-items: center;
     justify-content: center;
     pointer-events: none;
-    font-size: 1.25rem;
+  }
+
+  Icon {
+    font-size: 1.75rem;
   }
 }
