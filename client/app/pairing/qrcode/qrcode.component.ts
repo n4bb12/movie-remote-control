@@ -6,17 +6,17 @@ import {
   ViewChild,
 } from "@angular/core"
 
-import QRCode from "qrcode"
+import QrCode from "qrcode"
 
 import { pairingUrl } from "../url"
 
 @Component({
-  selector: "qrcode",
+  selector: "QrCode",
   templateUrl: "./qrcode.component.html",
   styleUrls: ["./qrcode.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QrcodeComponent implements OnInit {
+export class QrCodeComponent implements OnInit {
 
   @ViewChild("canvas") canvas: ElementRef
 
@@ -24,7 +24,7 @@ export class QrcodeComponent implements OnInit {
     const element = this.canvas.nativeElement
     const callback = error => error && console.error(error)
 
-    QRCode.toCanvas(element, pairingUrl, callback)
+    QrCode.toCanvas(element, pairingUrl, callback)
   }
 
 }

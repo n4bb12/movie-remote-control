@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/tslint",
   "extends": "../tslint.json",
   "rules": {
-    "component-selector": [true, "element", "app", "kebab-case"],
-    "directive-selector": [true, "attribute", "app", "camelCase"]
+    "component-selector": [true, "element", "", "pascal-case"],
+    "directive-selector": [true, "attribute", "", "camelCase"]
   }
 }

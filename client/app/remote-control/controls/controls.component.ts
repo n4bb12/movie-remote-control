@@ -4,7 +4,7 @@ import { Interval } from "../Interval"
 import { WebsocketService } from "../websocket.service"
 
 @Component({
-  selector: "controls",
+  selector: "Controls",
   templateUrl: "./controls.component.html",
   styleUrls: ["./controls.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,

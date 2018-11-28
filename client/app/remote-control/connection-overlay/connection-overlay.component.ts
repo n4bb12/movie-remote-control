@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component } from "@angular/core"
 import { WebsocketService } from "../websocket.service"
 
 @Component({
-  selector: "connection-overlay",
+  selector: "ConnectionOverlay",
   templateUrl: "./connection-overlay.component.html",
   styleUrls: ["./connection-overlay.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,

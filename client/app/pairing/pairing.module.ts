@@ -4,7 +4,7 @@ import { RouterModule } from "@angular/router"
 
 import { AwaitFontDirective } from "./await-font.directive"
 import { PairingComponent } from "./pairing.component"
-import { QrcodeComponent } from "./qrcode/qrcode.component"
+import { QrCodeComponent } from "./qrcode/qrcode.component"
 
 @NgModule({
   imports: [
@@ -18,7 +18,7 @@ import { QrcodeComponent } from "./qrcode/qrcode.component"
   ],
   declarations: [
     PairingComponent,
-    QrcodeComponent,
+    QrCodeComponent,
     AwaitFontDirective,
   ],
 })

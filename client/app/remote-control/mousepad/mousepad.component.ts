@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component } from "@angular/core"
 import { WebsocketService } from "../websocket.service"
 
 @Component({
-  selector: "mousepad",
+  selector: "Mousepad",
   templateUrl: "./mousepad.component.html",
   styleUrls: ["./mousepad.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,

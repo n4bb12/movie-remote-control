@@ -95,7 +95,7 @@
           }
         }
       },
-      "prefix": "app",
+      "prefix": "",
       "projectType": "application",
       "root": "client/",
       "schematics": {
