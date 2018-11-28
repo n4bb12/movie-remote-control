@@ -5,7 +5,7 @@ import { Subject } from "rxjs"
 import { WebsocketService } from "../websocket.service"
 
 @Component({
-  selector: "app-keyboard",
+  selector: "keyboard",
   templateUrl: "./keyboard.component.html",
   styleUrls: ["./keyboard.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,

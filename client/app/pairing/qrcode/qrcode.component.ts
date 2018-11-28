@@ -11,7 +11,7 @@ import QRCode from "qrcode"
 import { pairingUrl } from "../url"
 
 @Component({
-  selector: "app-qrcode",
+  selector: "qrcode",
   templateUrl: "./qrcode.component.html",
   styleUrls: ["./qrcode.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,

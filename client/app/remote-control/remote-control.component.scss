@@ -12,16 +12,16 @@
   user-select: none;
 }
 
-app-mousepad {
+mousepad {
   display: none;
 }
 
-app-keyboard {
+keyboard {
   align-self: end;
 }
 
 @media (min-height: 360px) {
-  app-mousepad {
+  mousepad {
     display: block;
   }
 }

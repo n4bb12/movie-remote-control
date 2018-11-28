@@ -3,7 +3,7 @@ import { Component } from "@angular/core"
 import { pairingUrl } from "./url"
 
 @Component({
-  selector: "app-pairing",
+  selector: "pairing",
   templateUrl: "./pairing.component.html",
   styleUrls: ["./pairing.component.scss"],
 })

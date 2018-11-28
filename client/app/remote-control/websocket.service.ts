@@ -91,7 +91,7 @@ export class WebsocketService {
     }
   }
 
-  private send(message: string): void {
+  private send(message: string) {
     this.ws.send(message)
     console.log("client sent:", message)
   }

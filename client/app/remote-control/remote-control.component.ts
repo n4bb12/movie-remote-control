@@ -1,7 +1,7 @@
 import { Component } from "@angular/core"
 
 @Component({
-  selector: "app-remote-control",
+  selector: "remote-control",
   templateUrl: "./remote-control.component.html",
   styleUrls: ["./remote-control.component.scss"],
 })
