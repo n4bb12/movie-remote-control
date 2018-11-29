@@ -1,5 +1,6 @@
 import express from "express"
 import history from "express-history-api-fallback"
+import figlet from "figlet"
 import http from "http"
 import openWithDefaultApp from "opn"
 
@@ -31,6 +32,9 @@ export function startServer({
     app.use(history("index.html", { root: webroot }))
 
     const onListen = () => {
+      console.log(figlet.textSync("Movie Remote Control", {
+        font: "Rectangles",
+      }))
       console.log(`Server is listening on ${url}`)
       if (open) {
         openWithDefaultApp(url)
