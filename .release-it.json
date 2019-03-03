@@ -1,9 +1,9 @@
 {
+  "git": {
+    "tagName": "v${version}"
+  },
   "github": {
     "release": true,
     "tokenRef": "RELEASE_IT"
-  },
-  "src": {
-    "tagName": "v${version}"
   }
 }
