@@ -18,7 +18,7 @@ import { pairingUrl } from "../url"
 })
 export class QrCodeComponent implements OnInit {
 
-  @ViewChild("canvas") canvas: ElementRef
+  @ViewChild("canvas", { static: true }) canvas: ElementRef
 
   ngOnInit() {
     const element = this.canvas.nativeElement

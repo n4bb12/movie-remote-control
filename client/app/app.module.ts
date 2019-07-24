@@ -10,11 +10,11 @@ import { AppComponent } from "./app.component"
     RouterModule.forRoot([
       {
         path: "pairing",
-        loadChildren: "./pairing/pairing.module#PairingModule",
+        loadChildren: () => import("./pairing/pairing.module").then(m => m.PairingModule),
       },
       {
         path: "remote-control",
-        loadChildren: "./remote-control/remote-control.module#RemoteControlModule",
+        loadChildren: () => import("./remote-control/remote-control.module").then(m => m.RemoteControlModule),
       },
       {
         path: "**",
