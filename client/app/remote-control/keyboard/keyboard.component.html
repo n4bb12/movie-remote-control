@@ -12,8 +12,5 @@
 
 <label class="__recent">
   {{ recentKeydown | async }}
-  <Icon
-    *ngIf="!(recentKeydown | async)"
-    name="more"
-  ></Icon>
+  <Icon *ngIf="(recentKeydown | async) == undefined" name="more"></Icon>
 </label>
